@@ -1,0 +1,3 @@
+// This is the simple trigger again
++ hello bot    // What the human says
+- Hello human! // How the bot responds

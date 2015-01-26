@@ -1,0 +1,73 @@
+{% set highlight="learn" %}
+{% extends "layout.html" %}
+{% block title %}Try RiveScript Online{% endblock %}
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="/try/tryonline.css">
+<h1>Try RiveScript Online</h1>
+
+With this page you can try RiveScript directly from your web browser! Simply
+type in some RiveScript code into the text area below and click the "Execute"
+button to test your code live inside your browser!<p>
+
+If you need help, <a href="/try/help">view the help page</a>.
+
+<div class="pull-right">
+    <button type="button" id="execute" class="btn btn-primary">
+        <i class="fa fa-play"></i>
+        Execute/Test Script
+    </button>
+</div>
+
+Templates: <select name="template" id="template">
+    <option value="">-- select a template --</option>
+    {% for item in [
+        "1-1-simple-example.rive",
+        "1-2-comments.rive",
+        "1-3-replies.rive",
+        "1-4-weight.rive",
+        "2-1-wildcards.rive",
+        "2-2-alternations.rive",
+        "2-3-optionals.rive",
+        "2-4-google1.rive",
+        "2-5-google2.rive",
+        "rs-standard.rive",
+        "testsuite.rive",
+    ] %}
+    <option value="{{ item }}">{{ item }}</option>
+    {% endfor %}
+</select>
+
+<hr>
+
+<textarea class="form-control" cols="80" rows="20" id="editor"></textarea>
+
+<div class="modal fade" id="chatModal" tabindex="-1" role="dialog" aria-labelledby="chatModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="chatModalLabel">Dialogue</h4>
+            </div>
+            <div class="modal-body">
+                <div class="try-dialogue" id="dialogue"></div>
+
+                <fieldset>
+                    <legend>Send a Message</legend>
+                    <input type="text" class="form-control" id="message" placeholder="Press Enter to send">
+                </fieldset>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+{% block scripts %}
+<script type="text/javascript" src="/try/rivescript-1.0.5.min.js"></script>
+<script type="text/javascript" src="/try/tryonline.js"></script>
+{% endblock %}

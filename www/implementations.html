@@ -1,0 +1,70 @@
+{% set highlight="develop" %}
+{% extends "layout.html" %}
+{% block title %}RiveScript Interpreters{% endblock %}
+{% block content %}
+
+<h1>Comparison of Implementations</h1>
+
+I currently maintain four different implementations of RiveScript, and some are
+better maintained than others. I'll try to keep this page up-to-date to include
+the differences in support between the different implementations, and use it as
+reference for eventually fixing these problems so they all support the same
+features of RiveScript.<p>
+
+In general, the order of priority for me adding features to RiveScript comes in
+this order: Perl, Python, JavaScript, and finally Java. At the time of writing
+this sentence, Python has a few features over Perl, and that's largely because
+I wrote the Python version second and thought of these ideas as I went.
+Sometimes the Python version will get a new feature before Perl, due to the
+popularity of the programming language in general.<p>
+
+I'll organize this list by feature, and list the implementations that support
+it, rather than the other way around. Features that were present "since 1.0"
+don't have links to the commits on GitHub.<p>
+
+<ul>
+    <li><strong>Unicode/UTF-8 Support</strong><br>
+        Allows using foreign characters in triggers, loosens up the filtering of
+        input messages, also allows for the user to tell the bot their e-mail
+        address without the @ and dot symbols being removed. Where supported, the
+        feature is considered experimental and is not enabled by default.
+        <ul>
+            <li>Perl (<a href="https://github.com/kirsle/rivescript-perl/commit/884708a4acf788a30274c62c3890d4587020a669">@884708a</a>)</li>
+            <li>Python (<a href="https://github.com/kirsle/rivescript-python/commit/2239fe6b1c333f77937cbb319e583b4238ce2cc9">@2239fe6</a>)</li>
+            <li>JavaScript (<a href="https://github.com/kirsle/rivescript-js/commit/0ea77415419b941ce6cadc3ab3743810104c2fe3">@0ea7741</a>)</li>
+        </ul>
+    </li>
+
+    <li><strong>Shortcut tags &lt;input&gt; and &lt;reply&gt; in Triggers</strong><br>
+        Shortcuts for <code>&lt;input1&gt;</code> and <code>&lt;reply1&gt;</code>,
+        respectively. This is for trigger lines only, not replies. For example,
+        <code>+&nbsp;&lt;input&gt;</code>
+        <ul>
+            <li>Python</li>
+            <li>Perl</li>
+            <li>JavaScript</li>
+        </ul>
+    </li>
+
+    <li><strong>Setter tags for &lt;bot&gt; and &lt;env&gt;</strong><br>
+        Lets you use <code>&lt;bot&nbsp;name=value&gt;</code> or
+        <code>&lt;env&nbsp;name=value&gt;</code> to set variables, similar to the
+        <code>&lt;set&gt;</code> tag.
+        <ul>
+            <li>Python</li>
+            <li>Perl</li>
+            <li>JavaScript</li>
+        </ul>
+    </li>
+
+    <li><strong>Multiple Redirects</strong><br>
+        Ssimilar to multiple replies; puts redirects and replies into the same
+        bucket for random selection. Acts as a shortcut to using
+        <code>-&nbsp;{@another&nbsp;trigger}</code>
+        <ul>
+            <li>Java</li>
+        </ul>
+    </li>
+</ul>
+
+{% endblock %}

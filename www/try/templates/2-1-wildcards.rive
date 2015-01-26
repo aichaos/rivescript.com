@@ -1,0 +1,36 @@
+// Capture the user's name: letters only!
++ my name is _
+- It's nice to meet you, <star>.
+- <star>, nice to meet you.
+- Pleased to meet you, <star>.
+
+// What if the user says "my name is 5"? 5 isn't a real name!
++ my name is #
+- Nobody has the name of <star>.
+- <star> isn't a real name.
+- Names don't have numbers in them, <star>.
+
+// If they say their name is something that contains both numbers
+// and letters, match this trigger:
++ my name is *
+- Your name has a number in it?
+
+// See how old the user is
++ i am # years old
+- A lot of people are <star> years old.
+
+// But don't let them give us their age in words!
++ i am _ years old
+- Can you say that again using a number?
+
+// Both numbers and letters?
++ i am * years old
+- You told me numbers and letters? Tell me only numbers.
+
+// Let them tell us where they're from. Numbers and letters are OK!
++ i am from *
+- What is it like to live in <star>?
+
+// This one has multiple wildcards in it
++ _ told me to say *
+- So did you say "<star2>" because "<star1>" told you to?

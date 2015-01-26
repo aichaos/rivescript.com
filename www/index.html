@@ -1,0 +1,62 @@
+{% set highlight="home" %}
+{% extends "layout.html" %}
+{% block title %}Artificial Intelligence Scripting Language{% endblock %}
+
+{% block jumbotron %}
+<div class="jumbotron">
+    <div class="container">
+        <h1>RiveScript</h1>
+
+        <p>RiveScript is a simple scripting language for chatbots with a friendly,
+            easy to learn syntax.<br>Create your own chatbot in JavaScript, Python,
+            Perl or Java.</p>
+
+            <p><a class="btn btn-primary btn-lg" href="/about" role="button">Learn More &raquo;</a></p>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-3">
+        <h2>Simple</h2>
+
+        RiveScript exposes a simple plain text scripting language that's easy
+        to learn and begin writing in quickly. No need to mess with complicated
+        opaque XML structures or random symbols and line noise like with some
+        other chatbot languages!
+    </div>
+
+    <div class="col-md-3">
+        <h2>Powerful</h2>
+
+        RiveScript has a handful of simple rules that can be combined in powerful
+        ways to build an impressive chatbot personality. Write triggers in a
+        simplified regular expression format to match complex sets of word
+        patterns in one go.
+    </div>
+
+    <div class="col-md-3">
+        <h2>Flexible</h2>
+
+        RiveScript takes a "Unix-like" approach to its development: the core
+        library is small and self-contained and it does one thing very
+        well&mdash;takes human input and gives an intelligent response. This
+        flexibility enables RiveScript to be used how <em>you</em> need it to.
+    </div>
+
+    <div class="col-md-3">
+        <h2>Open Source</h2>
+
+        Released under the most liberal open source license available, MIT.
+        Interfaces are available for JavaScript, Python, Perl and Java.
+        <a href="/develop">Learn more</a>.
+
+        <div class="text-center">
+            <i class="fa fa-github fa-5x"></i>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

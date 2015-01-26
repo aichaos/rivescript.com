@@ -1,0 +1,55 @@
+{% set highlight="develop" %}
+{% extends "layout.html" %}
+{% block title %}Develop with RiveScript{% endblock %}
+{% block content %}
+
+<h1>Develop with RiveScript</h1>
+
+Here lies information and resources to get started in developing with
+RiveScript. This information is aimed at software developers who wish to use
+RiveScript in their own projects, as well as developers who wish to help me work
+on the core RiveScript language itself.
+
+<h2>Using the RiveScript Library</h2>
+
+If you fall into the first camp and want to <em>use</em> RiveScript in your own
+application, check out the <a href="/interpreters">RiveScript Interpreters</a>
+page and find a library that will work for your project.<p>
+
+There are RiveScript modules currently available for JavaScript, Python, Perl,
+and Java.
+
+<h2>Write a New Library</h2>
+
+No RiveScript library is available for your favorite programming language? Why
+not write one! Check out the source codes of the existing implementations and
+begin porting it to a new language. If you'd prefer more of a "clean room"
+approach where you don't look at the existing implementations, read on for
+information about the Working Draft.
+
+<h1>RiveScript Working Draft</h1>
+
+The RiveScript Working Draft (WD) is a document that defines the standards for
+how RiveScript should work, from an implementation-agnostic point of view.
+When developing a RiveScript interpreter, the Working Draft should be followed
+as closely as possible. If any of the current implementations don't do what the
+Working Draft says they should, this is considered to be a bug and you can
+file a bug report or send a pull request.<p>
+
+The current version of the Working Draft is at
+<a href="http://www.rivescript.com/wd/RiveScript">http://www.rivescript.com/wd/RiveScript</a>
+and older versions are archived at
+<a href="http://static.rivescript.com/wd/">http://static.rivescript.com/wd/</a>.
+
+<h1>Contribute to the RiveScript Language Itself</h1>
+
+Feel free to <a href="/contact">get in touch</a> with me about changes and
+features for the core RiveScript language itself. First, review the
+<a href="/contributing">Contributor Guidelines</a> and make sure you understand
+the goals and scope of the RiveScript language; RiveScript is designed to be
+small and do one thing really well, which leaves a lot of nice-to-have features
+well outside of the scope of the core language (oftentimes these features would
+be something for a <em>chatbot application</em> to implement, not the core
+RiveScript interpreters).
+
+{% endblock %}

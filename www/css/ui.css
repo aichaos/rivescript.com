@@ -1,0 +1,73 @@
+/* Style sheet for RiveScript.com */
+
+body {
+    padding-top: 50px;    /* Make room for the top nav bar */
+    padding-bottom: 50px; /* Make it even */
+}
+
+/* Code example syntax */
+pre.rs .trigger {
+    color: #FF0000;
+}
+pre.rs .reply {
+    color: #0000FF;
+}
+pre.rs .condition {
+    color: #990099;
+}
+
+/* Interpreters page styles */
+li.rhel {
+    list-style-image: url(/img/icons/redhat.png);
+    line-height: 24px;
+}
+li.fedora {
+    list-style-image: url(/img/icons/fedora.png);
+    line-height: 24px;
+}
+li.ubuntu {
+    list-style-image: url(/img/icons/ubuntu.png);
+    line-height: 24px;
+}
+li.win32 {
+    list-style-image: url(/img/icons/win32.png);
+    line-height: 24px;
+}
+li.tar {
+    list-style-image: url(/img/icons/source.png);
+    line-height: 24px;
+}
+li.web {
+    list-style-image: url(/img/icons/www.png);
+    line-height: 24px;
+}
+
+/* Bootstrap CSS overrides */
+p {
+    margin: 10px 0px;
+}
+ul, ul ul, ol ul, ul ol, ol ol {
+    margin: 10px 0px;
+}
+blockquote {
+    margin: 20px 0px;
+}
+textarea {
+    font-family: "DejaVu Sans Mono", "Ubuntu Mono", "Lucida Console", monospace;
+}
+pre {
+    margin: 20px 0px;
+}
+
+/* Bootstrap theming */
+.navbar-inverse {
+    background-color: #552200;
+    background-image: linear-gradient(to bottom, #662200 0px, #441100 100%);
+}
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a {
+    color: #CDCDCD;
+}
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .open > a {
+    background-image: linear-gradient(to bottom, #441100 0px, #0F0F0F 100%);
+}

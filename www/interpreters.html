@@ -1,0 +1,356 @@
+{% set highlight="develop" %}
+{% extends "layout.html" %}
+{% block title %}RiveScript Interpreters{% endblock %}
+{% block content %}
+
+<h1>RiveScript Interpreters</h1>
+
+Here is a collection of links to RiveScript interpreters built in various
+programming languages. If the language you want to see an interpreter for isn't
+listed, why not create it? Head to <a href="/develop">Developers</a>
+for more information.<p>
+
+<strong>Quick navigation:</strong>
+
+<ul>
+    <li><strong><a href="#first">First Party Libraries</a></strong>
+    <ul>
+        <li><a href="#perl">Perl</a></li>
+        <li><a href="#python">Python</a></li>
+        <li><a href="#java">Java</a></li>
+        <li><a href="#js">JavaScript</a></li>
+    </ul></li>
+
+    <li><strong><a href="#third">Third Party Libraries</a></strong>
+    <ul>
+        <li><a href="#csharp">C#</a></li>
+    </ul></li>
+</ul>
+
+The Perl, Python, Java and JavaScript interpreters may have some slight quirks
+and differences in their support of RiveScript. All of them currently support
+everything in the Working Draft, but some go above and beyond in certain areas.
+See my <a href="/implementations">comparison of implementations</a> for a
+(hopefully) up-to-date listing of specific features.<p>
+
+If you would like to contribute any code changes (bug fixes or feature
+additions), please see the <a href="/contributing">contributing information</a>.
+
+<a name="first"></a>
+<h1>First Party Libraries</h1>
+
+These are RiveScript interpreters written by Noah Petherbridge. For the most
+part, all of these libraries will be kept in sync with new features. These
+are the "official" RiveScript libraries, written by the author of RiveScript!<p>
+
+Choose your programming language...
+
+<ul>
+    <li><a href="#perl">Perl</a></li>
+    <li><a href="#python">Python</a></li>
+    <li><a href="#java">Java</a></li>
+    <li><a href="#js">JavaScript</a></li>
+</ul>
+
+<hr>
+
+<a name="perl"></a>
+<h2>Perl</h2>
+
+The original RiveScript interpreter! This is RiveScript for the Perl 5
+programming language.<p>
+
+Notes:
+
+<ul>
+    <li>This supports Perl objects in RiveScript code by default.</li>
+    <li>This distribution comes with the <code>rivescript</code> command
+        line utility that lets you interactively test your RiveScript
+        bot. It can also be used in "JSON Mode" so a third-party program
+        can interact with it.</li>
+</ul>
+
+<h3>Install with cpan</h3>
+
+You can use <code>cpan</code> or <code>cpanm</code>
+(<a href="http://search.cpan.org/perldoc?App::cpanminus">App::cpanminus</a>) to
+install this module:
+
+<pre>$ cpanm RiveScript</pre>
+
+<h3>Revision Control</h3>
+
+You can download the latest bleeding-edge version of RiveScript-Perl at GitHub:
+
+<ul>
+    <li class="web">
+        <a href="https://github.com/kirsle/rivescript-perl">https://github.com/kirsle/rivescript-perl</a>
+    </li>
+</ul>
+
+<h3>Downloads</h3>
+
+You can download packaged stable releases of RiveScript-Perl here.<p>
+
+The latest stable version of RiveScript-Perl is <strong>1.36</strong> (Nov 26, 2014).<p>
+
+<strong>Ubuntu &amp; Debian Users:</strong> This module may already be available
+in your software sources! Try `<code>sudo apt-get install librivescript-perl</code>`.
+But, there might be a newer version available below...<p>
+
+<ul>
+    <li><strong>Windows Packages:</strong>
+    <ul>
+        <li class="win32">
+            <a href="http://code.activestate.com/ppm/RiveScript/">ppm install RiveScript</a>
+        </li>
+    </ul></li>
+
+    <li><strong>Linux Packages:</strong>
+    <ul>
+        <li class="fedora">
+            <a href="//static.rivescript.com/files/rpm/perl-RiveScript-1.36-20141126.noarch.rpm">perl-RiveScript-1.36-20141126.noarch.rpm</a>
+            <small>(70.9K; built on Fedora 20)</small>
+        </li>
+    </ul></li>
+
+    <li><strong>Source Release:</strong>
+    <ul>
+        <li class="tar">
+            <a href="//static.rivescript.com/files/src/RiveScript-1.36.tar.gz">RiveScript-1.36.tar.gz</a>
+            <small>(tar.gz; 110K)</small>
+        </li>
+    </ul></li>
+
+    <li><strong>CPAN Release:</strong>
+    <ul>
+        <li class="web">
+            <a href="http://search.cpan.org/perldoc?RiveScript">
+            http://search.cpan.org/perldoc?RiveScript</a>
+        </li>
+    </ul></li>
+</ul>
+
+<hr>
+
+<a name="python"></a>
+<h2>Python</h2>
+
+A RiveScript interpreter for the Python programming language.<p>
+
+Notes:
+
+<ul>
+    <li>This works for both Python 2 &amp; Python 3.</li>
+    <li>This supports Python objects in RiveScript code by default.</li>
+    <li>The package <code>rivescript</code> can also be executed directly,
+        and it will behave the same as the <code>rivescript</code> command
+        line utility from RiveScript-Perl: you can interactively test your
+        RiveScript bot with it. Also, it supports "JSON Mode", so that a third
+        party program can communicate with your bot using JSON.</li>
+</ul>
+
+<h3>Install with pip</h3>
+
+You can install RiveScript from the Python Package Index (PyPI):
+
+<pre>$ pip install rivescript
+# --or--
+$ easy_install rivescript</pre>
+
+<h3>Revision Control</h3>
+
+You can download the latest bleeding-edge version of RiveScript-Python at GitHub:
+
+<ul>
+    <li class="web">
+        <a href="https://github.com/kirsle/rivescript-python">https://github.com/kirsle/rivescript-python</a>
+    </li>
+</ul>
+
+<h3>Documentation</h3>
+
+Documentation for RiveScript-Python is hosted through PyPI:
+
+<ul>
+    <li class="web">
+        <a href="http://pythonhosted.org/rivescript/">http://pythonhosted.org/rivescript/</a>
+    </li>
+</ul>
+
+<h3>Downloads</h3>
+
+You can download packaged stable releases of RiveScript-Python here.<p>
+
+The latest stable version of RiveScript-Python is <strong>1.06</strong> (November 25, 2014).<p>
+
+<ul>
+    <li><strong>Windows Packages:</strong>
+    <ul>
+        <li class="win32">
+            <a href="//static.rivescript.com/files/win32/python-rivescript-1.06.win32.exe">python-rivescript-1.06.win32.exe</a>
+            <small>(Windows x86; 90.6K)</small>
+        </li>
+    </ul></li>
+
+    <li><strong>Linux Packages:</strong>
+    <ul>
+        <li class="fedora">
+            <a href="//static.rivescript.com/files/rpm/python-rivescript-1.06-1.noarch.rpm">python-rivescript-1.06-1.noarch.rpm</a>
+            <small>(Python 2.7; 109K)</small>
+        </li>
+    </ul></li>
+
+    <li><strong>Python Package Index:</strong>
+    <ul>
+        <li class="web">
+            <a href="https://pypi.python.org/pypi/rivescript/1.06">rivescript/1.06</a>
+        </li>
+    </ul></li>
+
+    <li><strong>Source Release:</strong>
+    <ul>
+        <li class="tar">
+            <a href="//static.rivescript.com/files/src/python-rivescript-1.06.tar.gz">python-rivescript-1.06.tar.gz</a>
+            <small>(tar.gz; 119K)</small>
+        </li>
+    </ul></li>
+</ul>
+
+<hr>
+
+<a name="java"></a>
+<h2>Java</h2>
+
+A RiveScript interpreter for the Java programming language.<p>
+
+Notes:
+
+<ul>
+    <li>Since Java isn't a dynamic language, there is no default language
+        handlers for RiveScript objects. However, there is some code
+        included to allow you to use Perl objects.</li>
+</ul>
+
+<h3>Revision Control:</h3>
+
+You can download the latest bleeding-edge version of RiveScript-Java at GitHub:
+
+<ul>
+    <li class="web">
+        <a href="https://github.com/kirsle/rivescript-java">https://github.com/kirsle/rivescript-java</a>
+    </li>
+</ul>
+
+<h3>Download</h3>
+
+You can download packaged releases from the GitHub repository. Here are direct links:
+
+<ul>
+    <li class="tar">
+        <a href="https://github.com/kirsle/rivescript-java/archive/v0.03-beta.tar.gz">rivescript-java-0.03-beta.tar.gz</a>
+        <small>(.tar.gz; 124.2K)</small>
+    </li>
+    <li class="tar">
+        <a href="https://github.com/kirsle/rivescript-java/archive/v0.03-beta.zip">rivescript-java-0.03-beta.zip</a>
+        <small>(.zip; 188.7K)</small>
+    </li>
+</ul>
+
+<hr>
+
+<a name="js"></a>
+<h2>JavaScript</h2>
+
+A RiveScript interpreter for the JavaScript programming language.<p>
+
+Notes:
+
+<ul>
+    <li>This library can be used both on the web (using jQuery, with ajax requests
+    to load RiveScript documents), or as a module for <a href="http://nodejs.org/">node.js</a>
+    or compatible JavaScript engine.</li>
+    <li>This supports JavaScript objects in RiveScript code by default.</li>
+</ul>
+
+<h3>Demo</h3>
+
+You can run a RiveScript.js demo in your browser!
+
+<ul>
+    <li><a href="/demo/rivescript-js" target="_blank">Standard RiveScript Bot</a></li>
+    <li><a href="/demo/rivescript-js/alice.html" target="_blank">Dr. Wallace's A.L.I.C.E.</a>
+        (experimental)</li>
+</ul>
+
+<h3>Install with npm</h3>
+
+You can install RiveScript as a Node Packaged Module (npm):
+
+<pre>$ npm install rivescript</pre>
+
+See also: <a href="https://npmjs.org/package/rivescript">npm package page</a>
+
+<h3>Revision Control</h3>
+
+You can check out the progress of rivescript-js on GitHub:
+
+<ul>
+    <li class="web">
+        <a href="https://github.com/kirsle/rivescript-js">https://github.com/kirsle/rivescript-js</a>
+    </li>
+</ul>
+
+<h3>Download</h3>
+
+Use these direct links to download the latest (bleeding-edge) JavaScript sources:
+
+<ul>
+    <li><a href="https://raw.github.com/kirsle/rivescript-js/master/lib/rivescript.js">
+        rivescript.js</a> (23.01 KB)</li>
+    <li><a href="https://raw.github.com/kirsle/rivescript-js/master/lib/rivescript.min.js">
+        rivescript.min.js</a> (minified; 11.72 KB)</li>
+</ul>
+
+Or, download the latest stable release (<strong>1.0.4</strong>, Nov 25 2014) as a Zip or Tarball
+here:
+
+<ul>
+    <li class="tar">
+        <a href="https://github.com/kirsle/rivescript-js/archive/v1.0.4.zip">rivescript-js.zip 1.0.4</a>
+        <small>(zip; 96.5K)</small>
+    </li>
+    <li class="tar">
+        <a href="https://github.com/kirsle/rivescript-js/archive/v1.0.4.tar.gz">rivescript-js.tar.gz 1.0.4</a>
+        <small>(tar.gz; 88K)</small>
+    </li>
+</ul>
+
+<hr>
+
+<a name="third"></a>
+<h1>Third Party Libraries</h1>
+
+These are RiveScript interpreters written by other authors. Some of them may
+still be in active development and not ready or usable yet for the general
+public.<p>
+
+<a name="csharp"></a>
+<h2>C#</h2>
+
+A RiveScript interpreter for the C# programming language.<p>
+
+This is being developed by Daniel Vinciguerra. It's still in active
+development. You can check on its progress via its GitHub page.
+
+<h3>Revision Control</h3>
+
+You can check out the progress of Mono-RiveScript at GitHub:
+
+<ul>
+    <li class="web">
+        <a href="https://github.com/dvinciguerra/Mono-RiveScript">https://github.com/dvinciguerra/Mono-RiveScript</a>
+    </li>
+</ul>
+
+{% endblock %}

@@ -1,0 +1,90 @@
+{% set highlight="about" %}
+{% extends "layout.html" %}
+{% block title %}About RiveScript{% endblock %}
+{% block content %}
+
+<h1>What is RiveScript?</h1>
+
+RiveScript is a simple scripting language for giving intelligence to chatbots
+and other conversational entities.<p>
+
+It's a plain text, line-based scripting language with goals of being simple to
+learn, quick to type, and easy to read and maintain. This is in contrast to
+other chatbot languages that require you to read and write ugly XML code (like
+<a href="/wiki/Language/AIML">AIML</a>), or memorize lots of random symbols
+and "line noise" to write and read your code (like
+<a href="/wiki/Language/ChatScript">ChatScript</a>).<p>
+
+<h2>Let's Meet RiveScript</h2>
+
+Without further ado, here is what RiveScript looks like.<p>
+
+RiveScript keeps simple replies simple, for example:
+
+<pre class="rs"><span class="trigger">+ hello bot</span>
+<span class="reply">- Hello, human!</span></pre>
+
+This will add a reply so that when a human says the words "Hello bot", the bot
+would respond with "Hello, human!"<p>
+
+With more advanced RiveScript code we can learn and repeat user variables and
+use more complicated trigger matching patterns:
+
+<pre class="rs"><span class="trigger">+ my name is *</span>
+<span class="reply">- &lt;set name=&lt;formal&gt;&gt;I will remember to call you &lt;get name&gt;.</span>
+
+<span class="trigger">+ (what is|do you know) my name</span>
+<span class="condition">* &lt;get name&gt; != undefined =></span> <span class="reply">Yes, your name is &lt;get name&gt;!
+<span class="reply">- I don't know your name.</span></pre>
+
+You can learn more in the <a href="/learn">RiveScript Tutorial</a>.
+
+<h1>RiveScript is "Unix-like"</h1>
+
+RiveScript is developed using the Unix philosophy that software should do one
+thing and do it well. RiveScript is <strong>not</strong> a complete, all-in-one
+chatbot (although <a href="/bots">those do exist</a>); instead it is
+designed to be a self-contained software library with a simple API that can be
+plugged into any existing codebase.<p>
+
+The RiveScript library <em>only</em> concerns itself with fetching a response to
+a user input message. Everything else is up to your program. This is in contrast
+to AIML bots ("Alicebots"), in which an Alicebot is a complete chatbot solution
+with a configuration system, runtime interface (e.g. support for connecting to
+instant messengers or listening on a socket server) and all the bells and
+whistles built in, and which <em>just so happens</em> to include a scripting
+language (AIML). With AIML bots, it's often difficult to separate out
+<em>just</em> the code that deals with AIML to use it in your own code.
+RiveScript's goal is to be simple and self-contained and easy to use it how
+<em>you</em> want to.<p>
+
+Read more about <a href="/contributing">RiveScript's goals and scope</a> in the
+Contributing Guidelines.
+
+<h1>What Can RiveScript Do?</h1>
+
+RiveScript was designed to do everything that AIML can do (you can read about
+<a href="/history">RiveScript's history</a>) and then some, and then some more
+and more. You can read about RiveScript in comparison to AIML at the
+<a href="/compare/aiml">RiveScript vs. AIML</a> page, but briefly, here are some
+of RiveScript's features:
+
+<ul>
+    <li>Use simplified regular expression style triggers for matching the
+        user's message.
+        <ul>
+            <li>Flexible options for trigger matching: wildcards, optional words,
+                alternative words/phrases, arrays, variable matching, and more.</li>
+        </ul>
+    </li>
+    <li>Flexible options for responses to a trigger: a direct "1:1" response,
+        random replies (with optional weighting), trigger redirections, internal
+        redirections, and more.</li>
+    <li>Lots of tags for manipulating variables, changing interpreter settings on
+        the fly, formatting text, substituting words, etc.</li>
+    <li>Can process programming code directly inside a RiveScript document, so
+        dynamic replies (for example, search engines) can be integrated directly
+        into RiveScript.</li>
+</ul>
+
+{% endblock %}
