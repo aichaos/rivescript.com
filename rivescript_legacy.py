@@ -25,3 +25,9 @@ def legacy_static(path):
     return redirect("http://static.rivescript.com/{}/{}".format(first, path),
         code=301
     )
+
+
+# Legacy tutorial URL
+@app.route("/docs/Tutorial.html")
+def legacy_tutorial():
+    return redirect("/docs/tutorial", code=301)
