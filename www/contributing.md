@@ -131,15 +131,15 @@ remove any trailing whitespaces at the ends of the lines of code.
 The primary implementations of RiveScript are all managed by the Git version
 control system and are hosted on GitHub at the following addresses:
 
-JavaScript: <https://github.com/kirsle/rivescript-js>
-Java: <https://github.com/kirsle/rivescript-java>
-Perl: <https://github.com/kirsle/rivescript-perl>
-Python: <https://github.com/kirsle/rivescript-python>
+JavaScript: <https://github.com/aichaos/rivescript-js>
+Java: <https://github.com/aichaos/rivescript-java>
+Perl: <https://github.com/aichaos/rivescript-perl>
+Python: <https://github.com/aichaos/rivescript-python>
 
 The procedure to contribute a code change is as follows:
 
 1. Fork one of the repositories into your own GitHub account.
 2. Check out your copy of the repository by i.e. git clone git@github.com:*your-name*/rivescript-js
 3. Work on your code change. Make sure the unit tests pass, and write a new unit test if necessary.
-4. Open a [pull request](https://help.github.com/articles/using-pull-requests/) from your repository's branch to kirsle's.
-5. If accepted, the pull request will be merged with kirsle's repository.
+4. Open a [pull request](https://help.github.com/articles/using-pull-requests/) from your repository's branch to aichaos's.
+5. If accepted, the pull request will be merged with aichaos's repository.
