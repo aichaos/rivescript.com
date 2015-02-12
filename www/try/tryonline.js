@@ -75,6 +75,7 @@ $(document).ready(function() {
                 return;
             }
             var reply = window.bot.reply("local-user", message);
+            reply = reply.replace(new RegExp("\n", "g"), "<br>");
 
             // Update the dialogue.
             var $user = $("<div></div>");
