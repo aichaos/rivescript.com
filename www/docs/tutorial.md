@@ -295,6 +295,50 @@ To make sure there's a space between continuations, use the escape sequence
 From the "tell me a poem" example, the escape sequence `\n` inserts a line
 break instead of a space.
 
+If you find that you frequently want to use continuations and you almost always
+want to have spaces (or line breaks) between each one, you can tell the parser
+to always insert these symbols automatically when it sees a `^` command.
+
+You do this with a "local parser option" which only applies to the current file
+and affects the lines that come after the parser option. For example:
+
+    // Tell the parser to join continuation lines with line breaks
+    ! local concat = newline
+
+    // Now we don't need to explicitly write the \n characters every time!
+    + tell me a poem
+    - Little Miss Muffit sat on her tuffet,
+    ^ In a nonchalant sort of way.
+    ^ With her forcefield around her,
+    ^ The Spider, the bounder,
+    ^ Is not in the picture today.
+
+    // Now change the concat mode to spaces
+    ! local concat = space
+
+    // Here we don't have to use \s like in the earlier example.
+    + what are you
+    - I am an artificial intelligence programmed
+    ^ using RiveScript.
+
+    // Go back to the default concatenation mode (which doesn't insert ANY
+    // character when joining lines)
+    ! local concat = none
+
+Because the `! local concat` setting changes the way the parser handles
+continuation lines, this setting is "file scoped" and only affects the parser
+while in the current file. When the parser is done with one file and begins
+processing the next one, the concatenation setting is set back to the default
+(`none`) and no spaces or line breaks will be automatically added in
+continuation commands.
+
+The supported options for this are:
+
+* `none` -- the default, nothing is added when continuation lines are joined
+  together.
+* `space` -- continuation lines are joined by a space character (`\s`)
+* `newline` -- continuation lines are joined by a line break character (`\n`)
+
 # ANATOMY OF A RIVESCRIPT BRAIN
 
 ## The Begin File
