@@ -80,19 +80,24 @@ It is advised that you configure your text editor to show invisible characters,
 such as tabs vs. spaces when indenting your code. Also, make sure that you
 remove any trailing whitespaces at the ends of the lines of code.
 
-## JavaScript
+## CoffeeScript
 
-* Use tabs for indentation, not spaces. Configure your text editor to display
-  tabs with however many spaces you like.
+* Use 2 (two) spaces for indentation, not tab characters.
 * Configure your text editor to show invisible characters, to further make sure
-  that you indent using tabs and not spaces.
-* Opening curly brackets always begin on the same line as their statement,
-  unlike in C where opening brackets for functions are placed on a new line by itself.
-* Always declare variables with var.
+  that you indent using spaces and not tabs.
 * Use `NAMES_LIKE_THIS` for constant values.
-* Always use semicolons.
 * Use camelCase names, not snake_case.
-* Use JSDoc style comments for documentation.
+* Use JSDoc style comments for documentation:
+    * The first line of the comment block begins with two comment characters: `##`
+    * Each subsequent line begins with one comment character: `#`
+    * The first part of the comment block contains the function definition
+      prototype, with data types like `string` and `int` and such.
+    * One blank line between the function prototype and the documentation.
+    * Document the function using Markdown syntax.
+    * End the comment block with two comment characters: `##`
+    * Any subsequent comment that isn't a part of the documentation block must
+      be separated from the block by at least one non-comment line (either a
+      blank line or CoffeeScript code).
 
 ## Java
 
@@ -131,10 +136,10 @@ remove any trailing whitespaces at the ends of the lines of code.
 The primary implementations of RiveScript are all managed by the Git version
 control system and are hosted on GitHub at the following addresses:
 
-JavaScript: <https://github.com/aichaos/rivescript-js>
-Java: <https://github.com/aichaos/rivescript-java>
-Perl: <https://github.com/aichaos/rivescript-perl>
-Python: <https://github.com/aichaos/rivescript-python>
+* JavaScript: <https://github.com/aichaos/rivescript-js>
+* Java: <https://github.com/aichaos/rivescript-java>
+* Perl: <https://github.com/aichaos/rivescript-perl>
+* Python: <https://github.com/aichaos/rivescript-python>
 
 The procedure to contribute a code change is as follows:
 
