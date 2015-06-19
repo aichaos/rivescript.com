@@ -1,5 +1,5 @@
 :meta extensions -nl2br headerid
-# NAME
+# Tutorial
 
 RiveScript::Tutorial - Learn to write RiveScript code.
 
