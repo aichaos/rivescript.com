@@ -20,7 +20,6 @@ def legacy_rss():
 @app.route("/demo/<path:path>")
 @app.route("/files/<path:path>")
 def legacy_static(path):
-    print request.path
     first = request.path.split("/")[1]
     return redirect("http://static.rivescript.com/{}/{}".format(first, path),
         code=301
