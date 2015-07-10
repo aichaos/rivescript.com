@@ -1,0 +1,21 @@
+rophako:
+  site:
+    site_name: rivescript.com
+    site_root: /home/rivescript/git/rivescript.com/www
+  db:
+    redis_prefix: 'rivescript:'
+  security:
+    secret_key: changeme
+    use_forwarded_for: true
+  mail:
+    sender: RiveScript.com <no-reply@rivescript.com>
+  blog:
+    title: RiveScript.com Blog
+    link: http://www.rivescript.com/
+    description: The RiveScript language blog.
+    image_title: RiveScript.com Blog
+    image_description: RiveScript
+  photo:
+    root_private: /home/rivescript/git/rivescript.com/www/static/photos
+  custom:
+    - rivescript_legacy
