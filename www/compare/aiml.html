@@ -12,541 +12,541 @@ This table lists all of the functionality present in AIML version
 
 <strong>Color Key:</strong>
 <ul>
-    <li>Yellow: AIML's and RiveScript's implementations of the feature
-    are more or less the same.</li>
+	<li>Yellow: AIML's and RiveScript's implementations of the feature
+	are more or less the same.</li>
 
-    <li>Cyan: Same as yellow, except RiveScript also 1up's AIML in a
-    certain way (usually, RiveScript has shortcut tags, as in
-    &lt;uppercase&gt;).</li>
+	<li>Cyan: Same as yellow, except RiveScript also 1up's AIML in a
+	certain way (usually, RiveScript has shortcut tags, as in
+	&lt;uppercase&gt;).</li>
 
-    <li>Blue: RiveScript's implementation of a feature is largely
-    superior to AIML's.</li>
+	<li>Blue: RiveScript's implementation of a feature is largely
+	superior to AIML's.</li>
 
-    <li>Red: AIML has a feature that RiveScript doesn't have. These are
-    usually useless or, in the case of &lt;date&gt;, are against what
-    RiveScript is all about.</li>
+	<li>Red: AIML has a feature that RiveScript doesn't have. These are
+	usually useless or, in the case of &lt;date&gt;, are against what
+	RiveScript is all about.</li>
 </ul><p>
 
 <table class="table">
-    <tr style="background-color: #000000; color: #FFFFFF">
-        <th align="center" valign="middle">AIML</th>
-        <th align="center" valign="middle">RiveScript</th>
-        <th align="center" valign="middle">Description</th>
-    </tr>
-    <tr style="background-color: #FFFFCC">
-        <td align="left" valign="top" nowrap>
-            <code>&lt;aiml version="X"&gt;</code>
-        </td>
-        <td align="left" valign="top" nowrap>
-            <code>! version = X</code>
-        </td>
-        <td align="left" valign="top">
-            Opening tag and version line.
-        </td>
-    </tr>
-    <tr style="background-color: #FFFFCC">
-        <td align="left" valign="top" nowrap>
-            <code>&lt;topic name="X"&gt;</code>
-        </td>
-        <td align="left" valign="top" nowrap>
-            <code>&gt; topic X</code>
-        </td>
-        <td align="left" valign="top">
-            Topic declarations.
-        </td>
-    </tr>
-    <tr style="background-color: #DDDDFF">
-        <td align="left" valign="top" nowrap>
-            &nbsp;
-        </td>
-        <td align="left" valign="top" nowrap>
-            <code>&lt; topic X inherits Y</code><br>
-            <code>&lt; topic A inherits B C</code>
-        </td>
-        <td align="left" valign="top">
-            Topics inheriting replies from other topics.
-        </td>
-    </tr>
-    <tr style="background-color: #FFDDDD">
-        <td align="left" valign="top" nowrap>
-            <code>&lt;category&gt;</code>
-        </td>
-        <td align="left" valign="top" nowrap>
-            &nbsp;
-        </td>
-        <td align="left" valign="top">
-            AIML's wrapper for a trigger/response (useless for RiveScript).
-        </td>
-    </tr>
-    <tr style="background-color: #DDDDFF">
-        <td align="left" valign="top" nowrap>
-            <code>&lt;pattern&gt;<br>
-            &nbsp;&nbsp;HELLO BOT<br>
-            &lt;/pattern&gt;</code>
-        </td>
-        <td align="left" valign="top" nowrap>
-            <code>+ hello bot</code>
-        </td>
-        <td align="left" valign="top">
-            Input pattern.
-            <ul style="margin-top: 0px; margin-bottom: 0px">
-                <li>AIML's:
-                <ul>
-                    <li>Must be uppercase</li>
-                    <li>Only supports wildcards * and _</li>
-                </ul></li>
+	<tr style="background-color: #000000; color: #FFFFFF">
+		<th align="center" valign="middle">AIML</th>
+		<th align="center" valign="middle">RiveScript</th>
+		<th align="center" valign="middle">Description</th>
+	</tr>
+	<tr style="background-color: #FFFFCC">
+		<td align="left" valign="top" nowrap>
+			<code>&lt;aiml version="X"&gt;</code>
+		</td>
+		<td align="left" valign="top" nowrap>
+			<code>! version = X</code>
+		</td>
+		<td align="left" valign="top">
+			Opening tag and version line.
+		</td>
+	</tr>
+	<tr style="background-color: #FFFFCC">
+		<td align="left" valign="top" nowrap>
+			<code>&lt;topic name="X"&gt;</code>
+		</td>
+		<td align="left" valign="top" nowrap>
+			<code>&gt; topic X</code>
+		</td>
+		<td align="left" valign="top">
+			Topic declarations.
+		</td>
+	</tr>
+	<tr style="background-color: #DDDDFF">
+		<td align="left" valign="top" nowrap>
+			&nbsp;
+		</td>
+		<td align="left" valign="top" nowrap>
+			<code>&lt; topic X inherits Y</code><br>
+			<code>&lt; topic A inherits B C</code>
+		</td>
+		<td align="left" valign="top">
+			Topics inheriting replies from other topics.
+		</td>
+	</tr>
+	<tr style="background-color: #FFDDDD">
+		<td align="left" valign="top" nowrap>
+			<code>&lt;category&gt;</code>
+		</td>
+		<td align="left" valign="top" nowrap>
+			&nbsp;
+		</td>
+		<td align="left" valign="top">
+			AIML's wrapper for a trigger/response (useless for RiveScript).
+		</td>
+	</tr>
+	<tr style="background-color: #DDDDFF">
+		<td align="left" valign="top" nowrap>
+			<code>&lt;pattern&gt;<br>
+			&nbsp;&nbsp;HELLO BOT<br>
+			&lt;/pattern&gt;</code>
+		</td>
+		<td align="left" valign="top" nowrap>
+			<code>+ hello bot</code>
+		</td>
+		<td align="left" valign="top">
+			Input pattern.
+			<ul style="margin-top: 0px; margin-bottom: 0px">
+				<li>AIML's:
+				<ul>
+					<li>Must be uppercase</li>
+					<li>Only supports wildcards * and _</li>
+				</ul></li>
 
-                <li>RiveScript's:
-                <ul>
-                    <li>Must be lowercase</li>
-                    <li>Supports wildcards *, _, and #</li>
-                    <li>Supports optional words</li>
-                    <li>Supports alternative words</li>
-                    <li>Supports named arrays of words</li>
-                </ul></li>
-            </ul>
-        </td>
-    </tr>
-    <tr style="background-color: #DDDDFF">
-        <td align="left" valign="top" nowrap>
-            <code>&lt;template&gt;<br>
-            &nbsp;&nbsp;&nbsp;Hello human!<br>
-            &lt;/template&gt;</code>
-        </td>
-        <td align="left" valign="top" nowrap>
-            <code>- Hello human!</code>
-        </td>
-        <td align="left" valign="top">
-            A response to an input pattern.
-            <ul style="margin-top: 0px; margin-bottom: 0px">
-                <li>AIML's:
-                <ul>
-                    <li>Can only have random replies with <code>&lt;random&gt;</code></li>
-                    <li>Can only have conditions with <code>&lt;condition&gt;</code> inside the template.</li>
-                </ul></li>
+				<li>RiveScript's:
+				<ul>
+					<li>Must be lowercase</li>
+					<li>Supports wildcards *, _, and #</li>
+					<li>Supports optional words</li>
+					<li>Supports alternative words</li>
+					<li>Supports named arrays of words</li>
+				</ul></li>
+			</ul>
+		</td>
+	</tr>
+	<tr style="background-color: #DDDDFF">
+		<td align="left" valign="top" nowrap>
+			<code>&lt;template&gt;<br>
+			&nbsp;&nbsp;&nbsp;Hello human!<br>
+			&lt;/template&gt;</code>
+		</td>
+		<td align="left" valign="top" nowrap>
+			<code>- Hello human!</code>
+		</td>
+		<td align="left" valign="top">
+			A response to an input pattern.
+			<ul style="margin-top: 0px; margin-bottom: 0px">
+				<li>AIML's:
+				<ul>
+					<li>Can only have random replies with <code>&lt;random&gt;</code></li>
+					<li>Can only have conditions with <code>&lt;condition&gt;</code> inside the template.</li>
+				</ul></li>
 
-                <li>RiveScript's:
-                <ul>
-                    <li>Can use multiple <code>-</code>'s for random replies.</li>
-                    <li>Can apply <code>{weight}</code> to random replies.</li>
-                    <li>Doesn't need to mix reply data with conditionals.</li>
-                </ul>
-            </ul>
-        </td>
-    </tr>
-    <tr style="background-color: #DDDDFF">
-        <td align="left" valign="top" nowrap>
-            <code>&lt;that&gt;XXX&lt;/that&gt;</code>
-        </td>
-        <td align="left" valign="top" nowrap>
-            <code>% xxx</code>
-        </td>
-        <td align="left" valign="top">
-            Match the user's input and also the bot's last message (to carry on short conversations, e.g. knock-knock jokes).
-            <ul style="margin-top: 0px; margin-bottom: 0px">
-                <li>AIML's has the same limitations as <code>&lt;pattern&gt;</code></li>
-                <li>RiveScript's has the same capabilities as <code>+Trigger</code>.</li>
-            </ul>
-        </td>
-    </tr>
-    <tr style="background-color: #FFFFCC">
-        <td align="left" valign="top" nowrap>
-            <code>&lt;star index="N"/&gt;</code>
-        </td>
-        <td align="left" valign="top" nowrap>
-            <code>&lt;star&gt;, &lt;starN&gt;</code>
-        </td>
-        <td align="left" valign="top">
-            Binding of any wildcards in the pattern/trigger.
-        </td>
-    </tr>
-    <tr style="background-color: #FFFFCC">
-        <td align="left" valign="top" nowrap>
-            <code>&lt;that index="N,M"&gt;</code>
-        </td>
-        <td align="left" valign="top" nowrap>
-            <code>&lt;replyN&gt;</code>
-        </td>
-        <td align="left" valign="top">
-            Insert the bot's previous replies.
-        </td>
-    </tr>
-    <tr style="background-color: #FFFFCC">
-        <td align="left" valign="top" nowrap>
-            <code>&lt;input index="N"&gt;</code>
-        </td>
-        <td align="left" valign="top" nowrap>
-            <code>&lt;inputN&gt;</code>
-        </td>
-        <td align="left" valign="top">
-            Insert the user's previous messages.
-        </td>
-    </tr>
-    <tr style="background-color: #FFFFCC">
-        <td align="left" valign="top" nowrap>
-            <code>&lt;thatstar index="N"&gt;</code>
-        </td>
-        <td align="left" valign="top" nowrap>
-            <code>&lt;botstar&gt;, &lt;botstarN&gt;</code>
-        </td>
-        <td align="left" valign="top">
-            Binding of any wildcards in a &lt;that&gt;/%Previous.
-        </td>
-    </tr>
-    <tr style="background-color: #FFDDDD">
-        <td align="left" valign="top" nowrap>
-            <code>&lt;topicstar index="N"&gt;</code>
-        </td>
-        <td align="left" valign="top" nowrap>
-            &nbsp;
-        </td>
-        <td align="left" valign="top">
-            Binding of wildcards in &lt;topic&gt; (useless so
-            RiveScript didn't implement this).
-        </td>
-    </tr>
-    <tr style="background-color: #FFFFCC">
-        <td align="left" valign="top" nowrap>
-            <code>&lt;get name="XXX" /&gt;</code>
-        </td>
-        <td align="left" valign="top" nowrap>
-            <code>&lt;get XXX&gt;</code>
-        </td>
-        <td align="left" valign="top">
-            Retrieve a user variable.
-        </td>
-    </tr>
-    <tr style="background-color: #FFFFCC">
-        <td align="left" valign="top" nowrap>
-            <code>&lt;set name="XXX"&gt;YYY&lt;/set&gt;</code>
-        </td>
-        <td align="left" valign="top" nowrap>
-            <code>&lt;set XXX=YYY&gt;</code>
-        </td>
-        <td align="left" valign="top">
-            Set a user variable.
-            <ul style="margin-top: 0px; margin-bottom: 0px">
-                <li>AIML's &lt;set&gt; tag also returns the value set after setting
-                it, and needs &lt;think&gt; to suppress it.</li>
-                <li>RiveScript's &lt;set&gt; sets the variable silently with no echo,
-                and needs &lt;get&gt; to also echo it.</li>
-            </ul>
-        </td>
-    </tr>
-    <tr style="background-color: #FFFFCC">
-        <td align="left" valign="top" nowrap>
-            <code>&lt;bot name="XXX" /&gt;</code>
-        </td>
-        <td align="left" valign="top" nowrap>
-            <code>&lt;bot XXX&gt;</code>
-        </td>
-        <td align="left" valign="top">
-            Retrieve a bot variable.
-        </td>
-    </tr>
-    <tr style="background-color: #DDDDFF">
-        <td align="left" valign="top" nowrap>
-            &nbsp;
-        </td>
-        <td align="left" valign="top" nowrap>
-            <code>&lt;env XXX&gt;</code>
-        </td>
-        <td align="left" valign="top">
-            Retrieve an environment/global variable.
-        </td>
-    </tr>
-    <tr style="background-color: #FFDDDD">
-        <td align="left" valign="top" nowrap>
-            <code>&lt;date /&gt;</code>
-        </td>
-        <td align="left" valign="top" nowrap>
-            &nbsp;
-        </td>
-        <td align="left" valign="top">
-            Insert the current date/time. This isn't implemented in RiveScript because
-            the exact formatting of a date/time stamp is subjective and should be left
-            to the writer, and handled through the use of objects instead.
-        </td>
-    </tr>
-    <tr style="background-color: #FFFFCC">
-        <td align="left" valign="top" nowrap>
-            <code>&lt;id /&gt;</code>
-        </td>
-        <td align="left" valign="top" nowrap>
-            <code>&lt;id&gt;</code>
-        </td>
-        <td align="left" valign="top">
-            Insert the chatting user's ID.
-        </td>
-    </tr>
-    <tr style="background-color: #FFDDDD">
-        <td align="left" valign="top" nowrap>
-            <code>&lt;size /&gt;</code>
-        </td>
-        <td align="left" valign="top" nowrap>
-            &nbsp;
-        </td>
-        <td align="left" valign="top">
-            Insert the number of loaded AIML categories. This isn't implemented in RiveScript
-            because it's difficult to count how many things RiveScript can reply to, since
-            triggers are much more complex than AIML's patterns.
-        </td>
-    </tr>
-    <tr style="background-color: #FFDDDD">
-        <td align="left" valign="top" nowrap>
-            <code>&lt;version /&gt;</code>
-        </td>
-        <td align="left" valign="top" nowrap>
-            &nbsp;
-        </td>
-        <td align="left" valign="top">
-            Inserts the AIML program version. This isn't implemented in RiveScript directly
-            because of its implementation-agnostic specification. Any interpreter can define
-            a <code>&lt;env version&gt;</code> if they'd like.
-        </td>
-    </tr>
-    <tr style="background-color: #CCFFFF">
-        <td align="left" valign="top" nowrap>
-            <code>&lt;uppercase&gt;XXX&lt;/uppercase&gt;</code>
-        </td>
-        <td align="left" valign="top" nowrap>
-            <code>{uppercase}XXX{/uppercase}</code>,<br>
-            <code>&lt;uppercase&gt;</code>
-        </td>
-        <td align="left" valign="top">
-            Uppercasing a string of text. RiveScript has a shortcut tag for
-            uppercasing <code>&lt;star&gt;</code>; AIML doesn't.
-        </td>
-    </tr>
-    <tr style="background-color: #CCFFFF">
-        <td align="left" valign="top" nowrap>
-            <code>&lt;lowercase&gt;XXX&lt;/lowercase&gt;</code>
-        </td>
-        <td align="left" valign="top" nowrap>
-            <code>{lowercase}XXX{/lowercase}</code>,<br>
-            <code>&lt;lowercase&gt;</code>
-        </td>
-        <td align="left" valign="top">
-            Lowercase a string of text. RiveScript has a shortcut tag for
-            lowercasing <code>&lt;star&gt;</code>; AIML doesn't.
-        </td>
-    </tr>
-    <tr style="background-color: #CCFFFF">
-        <td align="left" valign="top" nowrap>
-            <code>&lt;formal&gt;XXX&lt;/formal&gt;</code>
-        </td>
-        <td align="left" valign="top" nowrap>
-            <code>{formal}XXX{/formal}</code>,<br>
-            <code>&lt;formal&gt;</code>
-        </td>
-        <td align="left" valign="top">
-            Formalize a string of text. RiveScript has a shortcut tag for
-            formalizing <code>&lt;star&gt;</code>; AIML doesn't.
-        </td>
-    </tr>
-    <tr style="background-color: #CCFFFF">
-        <td align="left" valign="top" nowrap>
-            <code>&lt;sentence&gt;XXX&lt;/sentence&gt;</code>
-        <td align="left" valign="top" nowrap>
-            <code>{sentence}XXX{/sentence}</code>,<br>
-            <code>&lt;sentence&gt;</code>
-        </td>
-        <td align="left" valign="top">
-            Sentence-case a string of text. RiveScript has a shortcut tag for
-            sentence-casing <code>&lt;star&gt;</code>; AIML doesn't.
-        </td>
-    </tr>
-    <tr style="background-color: #DDDDFF">
-        <td align="left" valign="top" nowrap>
-            <code>&lt;condition name="X" value="Y"&gt;</code>
-        </td>
-        <td align="left" valign="top" nowrap>
-            <code>* X eq Y</code>
-        </td>
-        <td align="left" valign="top">
-            Conditionals.
-            <ul style="margin-top: 0px; margin-bottom: 0px">
-                <li>AIML's:
-                <ul>
-                    <li>Only supports an "equals" comparison.</li>
-                </ul></li>
+				<li>RiveScript's:
+				<ul>
+					<li>Can use multiple <code>-</code>'s for random replies.</li>
+					<li>Can apply <code>{weight}</code> to random replies.</li>
+					<li>Doesn't need to mix reply data with conditionals.</li>
+				</ul>
+			</ul>
+		</td>
+	</tr>
+	<tr style="background-color: #DDDDFF">
+		<td align="left" valign="top" nowrap>
+			<code>&lt;that&gt;XXX&lt;/that&gt;</code>
+		</td>
+		<td align="left" valign="top" nowrap>
+			<code>% xxx</code>
+		</td>
+		<td align="left" valign="top">
+			Match the user's input and also the bot's last message (to carry on short conversations, e.g. knock-knock jokes).
+			<ul style="margin-top: 0px; margin-bottom: 0px">
+				<li>AIML's has the same limitations as <code>&lt;pattern&gt;</code></li>
+				<li>RiveScript's has the same capabilities as <code>+Trigger</code>.</li>
+			</ul>
+		</td>
+	</tr>
+	<tr style="background-color: #FFFFCC">
+		<td align="left" valign="top" nowrap>
+			<code>&lt;star index="N"/&gt;</code>
+		</td>
+		<td align="left" valign="top" nowrap>
+			<code>&lt;star&gt;, &lt;starN&gt;</code>
+		</td>
+		<td align="left" valign="top">
+			Binding of any wildcards in the pattern/trigger.
+		</td>
+	</tr>
+	<tr style="background-color: #FFFFCC">
+		<td align="left" valign="top" nowrap>
+			<code>&lt;that index="N,M"&gt;</code>
+		</td>
+		<td align="left" valign="top" nowrap>
+			<code>&lt;replyN&gt;</code>
+		</td>
+		<td align="left" valign="top">
+			Insert the bot's previous replies.
+		</td>
+	</tr>
+	<tr style="background-color: #FFFFCC">
+		<td align="left" valign="top" nowrap>
+			<code>&lt;input index="N"&gt;</code>
+		</td>
+		<td align="left" valign="top" nowrap>
+			<code>&lt;inputN&gt;</code>
+		</td>
+		<td align="left" valign="top">
+			Insert the user's previous messages.
+		</td>
+	</tr>
+	<tr style="background-color: #FFFFCC">
+		<td align="left" valign="top" nowrap>
+			<code>&lt;thatstar index="N"&gt;</code>
+		</td>
+		<td align="left" valign="top" nowrap>
+			<code>&lt;botstar&gt;, &lt;botstarN&gt;</code>
+		</td>
+		<td align="left" valign="top">
+			Binding of any wildcards in a &lt;that&gt;/%Previous.
+		</td>
+	</tr>
+	<tr style="background-color: #FFDDDD">
+		<td align="left" valign="top" nowrap>
+			<code>&lt;topicstar index="N"&gt;</code>
+		</td>
+		<td align="left" valign="top" nowrap>
+			&nbsp;
+		</td>
+		<td align="left" valign="top">
+			Binding of wildcards in &lt;topic&gt; (useless so
+			RiveScript didn't implement this).
+		</td>
+	</tr>
+	<tr style="background-color: #FFFFCC">
+		<td align="left" valign="top" nowrap>
+			<code>&lt;get name="XXX" /&gt;</code>
+		</td>
+		<td align="left" valign="top" nowrap>
+			<code>&lt;get XXX&gt;</code>
+		</td>
+		<td align="left" valign="top">
+			Retrieve a user variable.
+		</td>
+	</tr>
+	<tr style="background-color: #FFFFCC">
+		<td align="left" valign="top" nowrap>
+			<code>&lt;set name="XXX"&gt;YYY&lt;/set&gt;</code>
+		</td>
+		<td align="left" valign="top" nowrap>
+			<code>&lt;set XXX=YYY&gt;</code>
+		</td>
+		<td align="left" valign="top">
+			Set a user variable.
+			<ul style="margin-top: 0px; margin-bottom: 0px">
+				<li>AIML's &lt;set&gt; tag also returns the value set after setting
+				it, and needs &lt;think&gt; to suppress it.</li>
+				<li>RiveScript's &lt;set&gt; sets the variable silently with no echo,
+				and needs &lt;get&gt; to also echo it.</li>
+			</ul>
+		</td>
+	</tr>
+	<tr style="background-color: #FFFFCC">
+		<td align="left" valign="top" nowrap>
+			<code>&lt;bot name="XXX" /&gt;</code>
+		</td>
+		<td align="left" valign="top" nowrap>
+			<code>&lt;bot XXX&gt;</code>
+		</td>
+		<td align="left" valign="top">
+			Retrieve a bot variable.
+		</td>
+	</tr>
+	<tr style="background-color: #DDDDFF">
+		<td align="left" valign="top" nowrap>
+			&nbsp;
+		</td>
+		<td align="left" valign="top" nowrap>
+			<code>&lt;env XXX&gt;</code>
+		</td>
+		<td align="left" valign="top">
+			Retrieve an environment/global variable.
+		</td>
+	</tr>
+	<tr style="background-color: #FFDDDD">
+		<td align="left" valign="top" nowrap>
+			<code>&lt;date /&gt;</code>
+		</td>
+		<td align="left" valign="top" nowrap>
+			&nbsp;
+		</td>
+		<td align="left" valign="top">
+			Insert the current date/time. This isn't implemented in RiveScript because
+			the exact formatting of a date/time stamp is subjective and should be left
+			to the writer, and handled through the use of objects instead.
+		</td>
+	</tr>
+	<tr style="background-color: #FFFFCC">
+		<td align="left" valign="top" nowrap>
+			<code>&lt;id /&gt;</code>
+		</td>
+		<td align="left" valign="top" nowrap>
+			<code>&lt;id&gt;</code>
+		</td>
+		<td align="left" valign="top">
+			Insert the chatting user's ID.
+		</td>
+	</tr>
+	<tr style="background-color: #FFDDDD">
+		<td align="left" valign="top" nowrap>
+			<code>&lt;size /&gt;</code>
+		</td>
+		<td align="left" valign="top" nowrap>
+			&nbsp;
+		</td>
+		<td align="left" valign="top">
+			Insert the number of loaded AIML categories. This isn't implemented in RiveScript
+			because it's difficult to count how many things RiveScript can reply to, since
+			triggers are much more complex than AIML's patterns.
+		</td>
+	</tr>
+	<tr style="background-color: #FFDDDD">
+		<td align="left" valign="top" nowrap>
+			<code>&lt;version /&gt;</code>
+		</td>
+		<td align="left" valign="top" nowrap>
+			&nbsp;
+		</td>
+		<td align="left" valign="top">
+			Inserts the AIML program version. This isn't implemented in RiveScript directly
+			because of its implementation-agnostic specification. Any interpreter can define
+			a <code>&lt;env version&gt;</code> if they'd like.
+		</td>
+	</tr>
+	<tr style="background-color: #CCFFFF">
+		<td align="left" valign="top" nowrap>
+			<code>&lt;uppercase&gt;XXX&lt;/uppercase&gt;</code>
+		</td>
+		<td align="left" valign="top" nowrap>
+			<code>{uppercase}XXX{/uppercase}</code>,<br>
+			<code>&lt;uppercase&gt;</code>
+		</td>
+		<td align="left" valign="top">
+			Uppercasing a string of text. RiveScript has a shortcut tag for
+			uppercasing <code>&lt;star&gt;</code>; AIML doesn't.
+		</td>
+	</tr>
+	<tr style="background-color: #CCFFFF">
+		<td align="left" valign="top" nowrap>
+			<code>&lt;lowercase&gt;XXX&lt;/lowercase&gt;</code>
+		</td>
+		<td align="left" valign="top" nowrap>
+			<code>{lowercase}XXX{/lowercase}</code>,<br>
+			<code>&lt;lowercase&gt;</code>
+		</td>
+		<td align="left" valign="top">
+			Lowercase a string of text. RiveScript has a shortcut tag for
+			lowercasing <code>&lt;star&gt;</code>; AIML doesn't.
+		</td>
+	</tr>
+	<tr style="background-color: #CCFFFF">
+		<td align="left" valign="top" nowrap>
+			<code>&lt;formal&gt;XXX&lt;/formal&gt;</code>
+		</td>
+		<td align="left" valign="top" nowrap>
+			<code>{formal}XXX{/formal}</code>,<br>
+			<code>&lt;formal&gt;</code>
+		</td>
+		<td align="left" valign="top">
+			Formalize a string of text. RiveScript has a shortcut tag for
+			formalizing <code>&lt;star&gt;</code>; AIML doesn't.
+		</td>
+	</tr>
+	<tr style="background-color: #CCFFFF">
+		<td align="left" valign="top" nowrap>
+			<code>&lt;sentence&gt;XXX&lt;/sentence&gt;</code>
+		<td align="left" valign="top" nowrap>
+			<code>{sentence}XXX{/sentence}</code>,<br>
+			<code>&lt;sentence&gt;</code>
+		</td>
+		<td align="left" valign="top">
+			Sentence-case a string of text. RiveScript has a shortcut tag for
+			sentence-casing <code>&lt;star&gt;</code>; AIML doesn't.
+		</td>
+	</tr>
+	<tr style="background-color: #DDDDFF">
+		<td align="left" valign="top" nowrap>
+			<code>&lt;condition name="X" value="Y"&gt;</code>
+		</td>
+		<td align="left" valign="top" nowrap>
+			<code>* X eq Y</code>
+		</td>
+		<td align="left" valign="top">
+			Conditionals.
+			<ul style="margin-top: 0px; margin-bottom: 0px">
+				<li>AIML's:
+				<ul>
+					<li>Only supports an "equals" comparison.</li>
+				</ul></li>
 
-                <li>RiveScript's:
-                <ul>
-                    <li>Supports numerous comparison operators:
-                    <ul>
-                        <li>==, eq</li>
-                        <li>!=, ne, &lt;&gt;</li>
-                        <li>&lt;, &gt;</li>
-                        <li>&lt;=, &gt;=</li>
-                    </ul>
-                </ul></li>
-            </ul>
-        </td>
-    </tr>
-    <tr style="background-color: #DDDDFF">
-        <td align="left" valign="top" nowrap>
-            <code>&lt;condition name="X"&gt;</code>
-        </td>
-        <td align="left" valign="top" nowrap>
-            &nbsp;
-        </td>
-        <td align="left" valign="top">
-            Paired with <code>&lt;li value="Y"&gt;</code>, runs multiple
-            "equals" comparisons against "X". Useless. See above.
-        </td>
-    </tr>
-    <tr style="background-color: #DDDDFF">
-        <td align="left" valign="top" nowrap>
-            <code>&lt;conditon&gt;</code>
-        </td>
-        <td align="left" valign="top" nowrap>
-            &nbsp;
-        </td>
-        <td align="left" valign="top">
-            Paired with <code>&lt;li name="X" value="Y"&gt;</code>, runs multiple
-            conditionals involving multiple variables "equaling" multiple
-            values. Still useless. See 2 above.
-        </td>
-    </tr>
-    <tr style="background-color: #FFFFCC">
-        <td align="left" valign="top" nowrap>
-            <code>&lt;random&gt;</code>
-        </td>
-        <td align="left" valign="top" nowrap>
-            <code>{random}</code>
-        </td>
-        <td align="left" valign="top">
-            Insert sub-bits of random data into a reply. This is AIML's only
-            method of randomness; RiveScript supports randomness at the level
-            of the reply itself. This is just for smaller bits of randomness
-            in the middle of another reply.
-        </td>
-    </tr>
-    <tr style="background-color: #FFDDDD">
-        <td align="left" valign="top" nowrap>
-            <code>&lt;li&gt;</code>
-        </td>
-        <td align="left" valign="top" nowrap>
-            &nbsp;
-        </td>
-        <td align="left" valign="top">
-            This is only for AIML's XML-based method of conditionals and
-            random tags; RiveScript has no need for this.
-        </td>
-    </tr>
-    <tr style="background-color: #FFDDDD">
-        <td align="left" valign="top" nowrap>
-            <code>&lt;gossip&gt;</code>
-        </td>
-        <td align="left" valign="top" nowrap>
-            &nbsp;
-        </td>
-        <td align="left" valign="top">
-            Append to a text file. What file? This wasn't implemented in RiveScript
-            for the same reason as <code>&lt;date&gt;</code>. It's too ambiguous.
-            Use objects instead.
-        </td>
-    </tr>
-    <tr style="background-color: #FFFFCC">
-        <td align="left" valign="top" nowrap>
-            <code>&lt;srai&gt;XXX&lt;/srai&gt;</code>,<br>
-            <code>&lt;sr/&gt;</code>
-        </td>
-        <td align="left" valign="top" nowrap>
-            <code>@ xxx</code>,<br>
-            <code>{@XXX}</code>,<br>
-            <code>&lt;@&gt;</code>
-        </td>
-        <td align="left" valign="top">
-            Redirect one reply to another one.
-        </td>
-    </tr>
-    <tr style="background-color: #FFFFCC">
-        <td align="left" valign="top" nowrap>
-            <code>&lt;person&gt;XXX&lt;/person&gt;</code>
-        </td>
-        <td align="left" valign="top" nowrap>
-            {person}XXX{/person},<br>
-            &lt;person&gt;
-        </td>
-        <td align="left" valign="top">
-            Swap 1st and 2nd person pronouns.
-        </td>
-    </tr>
-    <tr style="background-color: #FFDDDD">
-        <td align="left" valign="top" nowrap>
-            <code>&lt;person2&gt;XXX&lt;/person2&gt;</code>
-        </td>
-        <td align="left" valign="top" nowrap>
-            &nbsp;
-        </td>
-        <td align="left" valign="top">
-            Swap 1st and 3rd person pronouns. Is this even useful? I could never imagine
-            where this is useful. It wasn't ported to RiveScript.
-        </td>
-    </tr>
-    <tr style="background-color: #FFDDDD">
-        <td align="left" valign="top" nowrap>
-            <code>&lt;gender&gt;XXX&lt;/gender&gt;</code>
-        </td>
-        <td align="left" valign="top" nowrap>
-            &nbsp;
-        </td>
-        <td align="left" valign="top">
-            Swap gender pronouns. Where is <em>THIS</em> ever useful? Not ported to RiveScript.
-        </td>
-    </tr>
-    <tr style="background-color: #FFDDDD">
-        <td align="left" valign="top" nowrap>
-            <code>&lt;think&gt;</code>
-        </td>
-        <td align="left" valign="top" nowrap>
-            &nbsp;
-        </td>
-        <td align="left" valign="top">
-            Hide the output of AIML operations (namely, <code>&lt;set&gt;</code>). Due to the
-            difference in RiveScript's behavior, this tag is unnecessary.
-        </td>
-    </tr>
-    <tr style="background-color: #FFDDDD">
-        <td align="left" valign="top" nowrap>
-            <code>&lt;learn&gt;</code>
-        </td>
-        <td align="left" valign="top" nowrap>
-            &nbsp;
-        </td>
-        <td align="left" valign="top">
-            Load a new AIML file. This is entirely not useful at all.
-        </td>
-    </tr>
-    <tr style="background-color: #FFFFCC">
-        <td align="left" valign="top" nowrap>
-            <code>&lt;system&gt;</code>
-        </td>
-        <td align="left" valign="top" nowrap>
-            <code>&lt;call&gt;</code>
-        </td>
-        <td align="left" valign="top">
-            Invoke some higher power for assistance (be it system commands or
-            object macros).
-        </td>
-    </tr>
-    <tr style="background-color: #FFFFCC">
-        <td align="left" valign="top" nowrap>
-            <code>&lt;javascript&gt;</code>,<br>
-            <code>&lt;perl&gt;</code>,<br>
-            <em>etc.</em>
-        </td>
-        <td align="left" valign="top" nowrap>
-            <code>&gt; object XXX javascript</code>,<br>
-            <code>&gt; object XXX perl</code>,<br>
-            <em>etc.</em>
-        </td>
-        <td align="left" valign="top">
-            Invoking some higher power for assistance.
-        </td>
-    </tr>
+				<li>RiveScript's:
+				<ul>
+					<li>Supports numerous comparison operators:
+					<ul>
+						<li>==, eq</li>
+						<li>!=, ne, &lt;&gt;</li>
+						<li>&lt;, &gt;</li>
+						<li>&lt;=, &gt;=</li>
+					</ul>
+				</ul></li>
+			</ul>
+		</td>
+	</tr>
+	<tr style="background-color: #DDDDFF">
+		<td align="left" valign="top" nowrap>
+			<code>&lt;condition name="X"&gt;</code>
+		</td>
+		<td align="left" valign="top" nowrap>
+			&nbsp;
+		</td>
+		<td align="left" valign="top">
+			Paired with <code>&lt;li value="Y"&gt;</code>, runs multiple
+			"equals" comparisons against "X". Useless. See above.
+		</td>
+	</tr>
+	<tr style="background-color: #DDDDFF">
+		<td align="left" valign="top" nowrap>
+			<code>&lt;conditon&gt;</code>
+		</td>
+		<td align="left" valign="top" nowrap>
+			&nbsp;
+		</td>
+		<td align="left" valign="top">
+			Paired with <code>&lt;li name="X" value="Y"&gt;</code>, runs multiple
+			conditionals involving multiple variables "equaling" multiple
+			values. Still useless. See 2 above.
+		</td>
+	</tr>
+	<tr style="background-color: #FFFFCC">
+		<td align="left" valign="top" nowrap>
+			<code>&lt;random&gt;</code>
+		</td>
+		<td align="left" valign="top" nowrap>
+			<code>{random}</code>
+		</td>
+		<td align="left" valign="top">
+			Insert sub-bits of random data into a reply. This is AIML's only
+			method of randomness; RiveScript supports randomness at the level
+			of the reply itself. This is just for smaller bits of randomness
+			in the middle of another reply.
+		</td>
+	</tr>
+	<tr style="background-color: #FFDDDD">
+		<td align="left" valign="top" nowrap>
+			<code>&lt;li&gt;</code>
+		</td>
+		<td align="left" valign="top" nowrap>
+			&nbsp;
+		</td>
+		<td align="left" valign="top">
+			This is only for AIML's XML-based method of conditionals and
+			random tags; RiveScript has no need for this.
+		</td>
+	</tr>
+	<tr style="background-color: #FFDDDD">
+		<td align="left" valign="top" nowrap>
+			<code>&lt;gossip&gt;</code>
+		</td>
+		<td align="left" valign="top" nowrap>
+			&nbsp;
+		</td>
+		<td align="left" valign="top">
+			Append to a text file. What file? This wasn't implemented in RiveScript
+			for the same reason as <code>&lt;date&gt;</code>. It's too ambiguous.
+			Use objects instead.
+		</td>
+	</tr>
+	<tr style="background-color: #FFFFCC">
+		<td align="left" valign="top" nowrap>
+			<code>&lt;srai&gt;XXX&lt;/srai&gt;</code>,<br>
+			<code>&lt;sr/&gt;</code>
+		</td>
+		<td align="left" valign="top" nowrap>
+			<code>@ xxx</code>,<br>
+			<code>{@XXX}</code>,<br>
+			<code>&lt;@&gt;</code>
+		</td>
+		<td align="left" valign="top">
+			Redirect one reply to another one.
+		</td>
+	</tr>
+	<tr style="background-color: #FFFFCC">
+		<td align="left" valign="top" nowrap>
+			<code>&lt;person&gt;XXX&lt;/person&gt;</code>
+		</td>
+		<td align="left" valign="top" nowrap>
+			{person}XXX{/person},<br>
+			&lt;person&gt;
+		</td>
+		<td align="left" valign="top">
+			Swap 1st and 2nd person pronouns.
+		</td>
+	</tr>
+	<tr style="background-color: #FFDDDD">
+		<td align="left" valign="top" nowrap>
+			<code>&lt;person2&gt;XXX&lt;/person2&gt;</code>
+		</td>
+		<td align="left" valign="top" nowrap>
+			&nbsp;
+		</td>
+		<td align="left" valign="top">
+			Swap 1st and 3rd person pronouns. Is this even useful? I could never imagine
+			where this is useful. It wasn't ported to RiveScript.
+		</td>
+	</tr>
+	<tr style="background-color: #FFDDDD">
+		<td align="left" valign="top" nowrap>
+			<code>&lt;gender&gt;XXX&lt;/gender&gt;</code>
+		</td>
+		<td align="left" valign="top" nowrap>
+			&nbsp;
+		</td>
+		<td align="left" valign="top">
+			Swap gender pronouns. Where is <em>THIS</em> ever useful? Not ported to RiveScript.
+		</td>
+	</tr>
+	<tr style="background-color: #FFDDDD">
+		<td align="left" valign="top" nowrap>
+			<code>&lt;think&gt;</code>
+		</td>
+		<td align="left" valign="top" nowrap>
+			&nbsp;
+		</td>
+		<td align="left" valign="top">
+			Hide the output of AIML operations (namely, <code>&lt;set&gt;</code>). Due to the
+			difference in RiveScript's behavior, this tag is unnecessary.
+		</td>
+	</tr>
+	<tr style="background-color: #FFDDDD">
+		<td align="left" valign="top" nowrap>
+			<code>&lt;learn&gt;</code>
+		</td>
+		<td align="left" valign="top" nowrap>
+			&nbsp;
+		</td>
+		<td align="left" valign="top">
+			Load a new AIML file. This is entirely not useful at all.
+		</td>
+	</tr>
+	<tr style="background-color: #FFFFCC">
+		<td align="left" valign="top" nowrap>
+			<code>&lt;system&gt;</code>
+		</td>
+		<td align="left" valign="top" nowrap>
+			<code>&lt;call&gt;</code>
+		</td>
+		<td align="left" valign="top">
+			Invoke some higher power for assistance (be it system commands or
+			object macros).
+		</td>
+	</tr>
+	<tr style="background-color: #FFFFCC">
+		<td align="left" valign="top" nowrap>
+			<code>&lt;javascript&gt;</code>,<br>
+			<code>&lt;perl&gt;</code>,<br>
+			<em>etc.</em>
+		</td>
+		<td align="left" valign="top" nowrap>
+			<code>&gt; object XXX javascript</code>,<br>
+			<code>&gt; object XXX perl</code>,<br>
+			<em>etc.</em>
+		</td>
+		<td align="left" valign="top">
+			Invoking some higher power for assistance.
+		</td>
+	</tr>
 </table>
 
 <h2>RiveScript-Exclusive Features</h2>
@@ -554,29 +554,29 @@ This table lists all of the functionality present in AIML version
 Here are all of the things RiveScript has which AIML simply does not at all:
 
 <ul>
-    <li><strong>! Definition</strong> command; Alice bots need a handful of configuration
-    files, separate from the actual AIML files, to define things such as the bot's name
-    and other variables. These features are built right in to RiveScript itself.
-    <br>&nbsp;</li>
+	<li><strong>! Definition</strong> command; Alice bots need a handful of configuration
+	files, separate from the actual AIML files, to define things such as the bot's name
+	and other variables. These features are built right in to RiveScript itself.
+	<br>&nbsp;</li>
 
-    <li><strong>Weighted random responses.</strong>
-    <br>&nbsp;</li>
+	<li><strong>Weighted random responses.</strong>
+	<br>&nbsp;</li>
 
-    <li><strong>Object macros.</strong>
-    <br>&nbsp;</li>
+	<li><strong>Object macros.</strong>
+	<br>&nbsp;</li>
 
-    <li><strong>Topics can inherit other topics.</strong>
-    <br>&nbsp;</li>
+	<li><strong>Topics can inherit other topics.</strong>
+	<br>&nbsp;</li>
 
-    <li><strong>Tags that AIML doesn't have:</strong>
-    <ul>
-        <li><code>&lt;add&gt;</code></li>
-        <li><code>&lt;sub&gt;</code></li>
-        <li><code>&lt;mult&gt;</code></li>
-        <li><code>&lt;div&gt;</code></li>
-        <li><code>&lt;env&gt;</code></li>
-        <li><code>{!}</code></li>
-    </ul></li>
+	<li><strong>Tags that AIML doesn't have:</strong>
+	<ul>
+		<li><code>&lt;add&gt;</code></li>
+		<li><code>&lt;sub&gt;</code></li>
+		<li><code>&lt;mult&gt;</code></li>
+		<li><code>&lt;div&gt;</code></li>
+		<li><code>&lt;env&gt;</code></li>
+		<li><code>{!}</code></li>
+	</ul></li>
 </ul>
 
 {% endblock %}
