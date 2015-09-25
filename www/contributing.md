@@ -3,7 +3,7 @@
 
 This page contains guidelines for contributing to RiveScript, either for the
 core RiveScript language or for one of the primary implementations of RiveScript
-(the first-party Perl, Python, Java and JavaScript libraries).
+(the first-party Perl, Python, Java, JavaScript and Go libraries).
 
 # Core Language
 
@@ -14,7 +14,7 @@ documents, and which will need to be implemented in the first-party RiveScript
 libraries.
 
 Unless you are a programmer that is well versed in the languages of Perl,
-Python, Java, and JavaScript, contributions to the core RiveScript language
+Python, Java, JavaScript and Go, contributions to the core RiveScript language
 should probably be limited to feature requests. If accepted, I will personally
 implement the feature into all of the primary RiveScript libraries.
 
@@ -28,8 +28,8 @@ The goals and scope of RiveScript:
 * **Use the Unix Philosophy:** "A program should do one thing and do it well."
   RiveScript is designed to be a minimalistic, black box reply-fetching core
   component for a chatbot. This is in stark contrast to most implementations of
-  AIML in which an "Alicebot" tends to be a complete solution, out of the box,
-  head-to-toe for a complete chatbot, including configuration, a user interface
+  AIML in which an "Alicebot" tends to be a complete out-of-the-box solution
+  for a complete chatbot, including configuration, a user interface
   of some sort, and so on. Alicebots tend to be difficult to separate from their
   AIML parsing code, and one of RiveScript's goals is to avoid that and keep
   the core module lightweight.
@@ -65,6 +65,25 @@ RiveScript language or its implementations:
   be "bloated" by including native support for MySQL or Postgres or
   *insert-your-favorite-dbm-here*.
 
+# Contributing Examples
+
+Perhaps the easiest thing to contribute to the RiveScript libraries are examples
+of how to use it in various circumstances. For example, the JavaScript library
+includes an example [Slack bot](https://github.com/aichaos/rivescript-js/tree/master/eg/slack-bot)
+and others in its [examples](https://github.com/aichaos/rivescript-js/tree/master/eg)
+directory.
+
+Examples should follow these guidelines:
+
+* Keep them small and focused. A developer should be able to quickly read the
+  source code and understand the concepts that the example is trying to convey.
+* Keep them self-contained in one folder. They can have sub-folders, and they
+  can refer to the common RiveScript example brain, but if they introduce any
+  outside dependencies they should keep everything contained in one root folder.
+  A good example is the [Slack bot](https://github.com/aichaos/rivescript-js/tree/master/eg)
+  in RiveScript-JS; it adds a dependency on `slack-client` from NPM, and it
+  keeps track of it in its own `package.json` file.
+
 # Programming Style Guides
 
 This section outlines the programming style of each of the primary
@@ -98,6 +117,11 @@ remove any trailing whitespaces at the ends of the lines of code.
     * Any subsequent comment that isn't a part of the documentation block must
       be separated from the block by at least one non-comment line (either a
       blank line or CoffeeScript code).
+
+## Go
+
+* Use [go fmt](https://blog.golang.org/go-fmt-your-code) and run your code
+  through the `gofmt` command before submitting any pull requests.
 
 ## Java
 
@@ -136,6 +160,7 @@ remove any trailing whitespaces at the ends of the lines of code.
 The primary implementations of RiveScript are all managed by the Git version
 control system and are hosted on GitHub at the following addresses:
 
+* Go: <https://github.com/aichaos/rivescript-go>
 * JavaScript: <https://github.com/aichaos/rivescript-js>
 * Java: <https://github.com/aichaos/rivescript-java>
 * Perl: <https://github.com/aichaos/rivescript-perl>

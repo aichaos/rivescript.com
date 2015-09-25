@@ -15,10 +15,11 @@ for more information.<p>
 <ul>
 	<li><strong><a href="#first">First Party Libraries</a></strong>
 	<ul>
-		<li><a href="#perl">Perl</a></li>
-		<li><a href="#python">Python</a></li>
+		<li><a href="#go">Go</a></li>
 		<li><a href="#java">Java</a></li>
 		<li><a href="#js">JavaScript</a></li>
+		<li><a href="#perl">Perl</a></li>
+		<li><a href="#python">Python</a></li>
 	</ul></li>
 
 	<li><strong><a href="#third">Third Party Libraries</a></strong>
@@ -27,11 +28,11 @@ for more information.<p>
 	</ul></li>
 </ul>
 
-The Perl, Python, Java and JavaScript interpreters may have some slight quirks
-and differences in their support of RiveScript. All of them currently support
-everything in the Working Draft, but some go above and beyond in certain areas.
-See my <a href="/implementations">comparison of implementations</a> for a
-(hopefully) up-to-date listing of specific features.<p>
+The Go, Java, JavaScript, Perl and Python interpreters may have some slight
+quirks and differences in their support of RiveScript. All of them currently
+support everything in the Working Draft, but some go above and beyond in
+certain areas. See my <a href="/implementations">comparison of implementations</a>
+for a (hopefully) up-to-date listing of specific features.<p>
 
 If you would like to contribute any code changes (bug fixes or feature
 additions), please see the <a href="/contributing">contributing information</a>.
@@ -46,10 +47,167 @@ are the "official" RiveScript libraries, written by the author of RiveScript!<p>
 Choose your programming language...
 
 <ul>
-	<li><a href="#perl">Perl</a></li>
-	<li><a href="#python">Python</a></li>
+	<li><a href="#go">Go</a></li>
 	<li><a href="#java">Java</a></li>
 	<li><a href="#js">JavaScript</a></li>
+	<li><a href="#perl">Perl</a></li>
+	<li><a href="#python">Python</a></li>
+</ul>
+
+<hr>
+
+<a name="go"></a>
+<h2>Go</h2>
+
+A RiveScript interpreter for the Go programming language.<p>
+
+Notes:
+
+<ul>
+	<li>This supports JavaScript object macros in RiveScript code.</li>
+	<li>Object macros may be defined in Go, but they must be compiled into
+		your program (not dynamically loaded in RiveScript source code).</li>
+</ul>
+
+<h3>Install with go get</h3>
+
+You can install the source code into your Go path:
+
+<pre>$ go get github.com/aichaos/rivescript-go</pre>
+
+Afterward, you can install the stand-alone RiveScript interpreter executable
+(which includes JavaScript object macro support):
+
+<pre>$ go install github.com/aichaos/rivescript-go/cmd/rivescript</pre>
+
+<h3>Documentation</h3>
+
+Documentation for RiveScript-Go is available on Godoc:
+
+<ul>
+	<li class="web">
+		<a href="http://godoc.org/github.com/aichaos/rivescript-go">RiveScript-Go</a>
+	</li>
+	<li class="web">
+		<a href="http://godoc.org/github.com/aichaos/rivescript-go/cmd/rivescript">rivescript.exe</a> (stand-alone interpreter shell)
+	</li>
+	<li class="web">
+		<a href="http://godoc.org/github.com/aichaos/rivescript-go/lang/rivescript_js">RiveScript_js</a> (JavaScript object macro support)
+	</li>
+</ul>
+
+<h3>Revision Control:</h3>
+
+You can download the latest bleeding-edge version of RiveScript-Go at GitHub:
+
+<ul>
+	<li class="web">
+		<a href="https://github.com/aichaos/rivescript-go">https://github.com/aichaos/rivescript-go</a>
+	</li>
+</ul>
+
+<h3>Download</h3>
+
+RiveScript-Go is in beta and has no stable releases yet.
+
+<hr>
+
+<a name="java"></a>
+<h2>Java</h2>
+
+A RiveScript interpreter for the Java programming language.<p>
+
+Notes:
+
+<ul>
+	<li>Since Java isn't a dynamic language, there is no default language
+		handlers for RiveScript objects. However, there is some code
+		included to allow you to use Perl objects.</li>
+</ul>
+
+<h3>Revision Control:</h3>
+
+You can download the latest bleeding-edge version of RiveScript-Java at GitHub:
+
+<ul>
+	<li class="web">
+		<a href="https://github.com/aichaos/rivescript-java">https://github.com/aichaos/rivescript-java</a>
+	</li>
+</ul>
+
+<h3>Download</h3>
+
+You can download packaged releases from the GitHub repository. Here are direct links:
+
+<ul>
+	<li class="tar">
+		<a href="https://github.com/aichaos/rivescript-java/archive/v0.03-beta.tar.gz">rivescript-java-0.03-beta.tar.gz</a>
+		<small>(.tar.gz; 124.2K)</small>
+	</li>
+	<li class="tar">
+		<a href="https://github.com/aichaos/rivescript-java/archive/v0.03-beta.zip">rivescript-java-0.03-beta.zip</a>
+		<small>(.zip; 188.7K)</small>
+	</li>
+</ul>
+
+<hr>
+
+<a name="js"></a>
+<h2>JavaScript</h2>
+
+A RiveScript interpreter for the JavaScript programming language.<p>
+
+Notes:
+
+<ul>
+	<li>This library can be used both on the web (using jQuery, with ajax requests
+	to load RiveScript documents), or as a module for <a href="http://nodejs.org/">node.js</a>
+	or compatible JavaScript engine.</li>
+	<li>This supports JavaScript objects in RiveScript code by default.</li>
+</ul>
+
+<h3>Demo</h3>
+
+You can run a RiveScript.js demo in your browser!
+
+<ul>
+	<li><a href="http://static.rivescript.com/demo/rivescript-js" target="_blank">Standard RiveScript Bot</a></li>
+	<li><a href="http://static.rivescript.com/demo/rivescript-js/alice.html" target="_blank">Dr. Wallace's A.L.I.C.E.</a>
+		(experimental)</li>
+</ul>
+
+<h3>Install with npm</h3>
+
+You can install RiveScript as a Node Packaged Module (npm):
+
+<pre>$ npm install rivescript</pre>
+
+See also: <a href="https://npmjs.org/package/rivescript">npm package page</a>
+
+<h3>Revision Control</h3>
+
+You can check out the progress of rivescript-js on GitHub:
+
+<ul>
+	<li class="web">
+		<a href="https://github.com/aichaos/rivescript-js">https://github.com/aichaos/rivescript-js</a>
+	</li>
+</ul>
+
+<h3>Download</h3>
+
+Download the latest stable release (<strong>1.1.4</strong>, Sept 9 2015) as a Zip or Tarball
+here:
+
+<ul>
+	<li class="tar">
+		<a href="http://static.rivescript.com/files/src/rivescript-js-1.1.4.zip">rivescript-js.zip 1.1.4</a>
+		<small>(zip; 161K)</small>
+	</li>
+	<li class="tar">
+		<a href="http://static.rivescript.com/files/src/rivescript-js-1.1.4.tar.gz">rivescript-js.tar.gz 1.1.4</a>
+		<small>(tar.gz; 135K)</small>
+	</li>
 </ul>
 
 <hr>
@@ -215,106 +373,6 @@ The latest stable version of RiveScript-Python is <strong>1.06</strong> (Novembe
 			<small>(tar.gz; 119K)</small>
 		</li>
 	</ul></li>
-</ul>
-
-<hr>
-
-<a name="java"></a>
-<h2>Java</h2>
-
-A RiveScript interpreter for the Java programming language.<p>
-
-Notes:
-
-<ul>
-	<li>Since Java isn't a dynamic language, there is no default language
-		handlers for RiveScript objects. However, there is some code
-		included to allow you to use Perl objects.</li>
-</ul>
-
-<h3>Revision Control:</h3>
-
-You can download the latest bleeding-edge version of RiveScript-Java at GitHub:
-
-<ul>
-	<li class="web">
-		<a href="https://github.com/aichaos/rivescript-java">https://github.com/aichaos/rivescript-java</a>
-	</li>
-</ul>
-
-<h3>Download</h3>
-
-You can download packaged releases from the GitHub repository. Here are direct links:
-
-<ul>
-	<li class="tar">
-		<a href="https://github.com/aichaos/rivescript-java/archive/v0.03-beta.tar.gz">rivescript-java-0.03-beta.tar.gz</a>
-		<small>(.tar.gz; 124.2K)</small>
-	</li>
-	<li class="tar">
-		<a href="https://github.com/aichaos/rivescript-java/archive/v0.03-beta.zip">rivescript-java-0.03-beta.zip</a>
-		<small>(.zip; 188.7K)</small>
-	</li>
-</ul>
-
-<hr>
-
-<a name="js"></a>
-<h2>JavaScript</h2>
-
-A RiveScript interpreter for the JavaScript programming language.<p>
-
-Notes:
-
-<ul>
-	<li>This library can be used both on the web (using jQuery, with ajax requests
-	to load RiveScript documents), or as a module for <a href="http://nodejs.org/">node.js</a>
-	or compatible JavaScript engine.</li>
-	<li>This supports JavaScript objects in RiveScript code by default.</li>
-</ul>
-
-<h3>Demo</h3>
-
-You can run a RiveScript.js demo in your browser!
-
-<ul>
-	<li><a href="http://static.rivescript.com/demo/rivescript-js" target="_blank">Standard RiveScript Bot</a></li>
-	<li><a href="http://static.rivescript.com/demo/rivescript-js/alice.html" target="_blank">Dr. Wallace's A.L.I.C.E.</a>
-		(experimental)</li>
-</ul>
-
-<h3>Install with npm</h3>
-
-You can install RiveScript as a Node Packaged Module (npm):
-
-<pre>$ npm install rivescript</pre>
-
-See also: <a href="https://npmjs.org/package/rivescript">npm package page</a>
-
-<h3>Revision Control</h3>
-
-You can check out the progress of rivescript-js on GitHub:
-
-<ul>
-	<li class="web">
-		<a href="https://github.com/aichaos/rivescript-js">https://github.com/aichaos/rivescript-js</a>
-	</li>
-</ul>
-
-<h3>Download</h3>
-
-Download the latest stable release (<strong>1.1.4</strong>, Sept 9 2015) as a Zip or Tarball
-here:
-
-<ul>
-	<li class="tar">
-		<a href="http://static.rivescript.com/files/src/rivescript-js-1.1.4.zip">rivescript-js.zip 1.1.4</a>
-		<small>(zip; 161K)</small>
-	</li>
-	<li class="tar">
-		<a href="http://static.rivescript.com/files/src/rivescript-js-1.1.4.tar.gz">rivescript-js.tar.gz 1.1.4</a>
-		<small>(tar.gz; 135K)</small>
-	</li>
 </ul>
 
 <hr>
