@@ -15,7 +15,24 @@ RiveScript!
 
 <hr>
 
-<h1>Aires Bot</h1>
+<h1>Admiral</h1>
+
+Admiral is a Python chatbot that utilizes RiveScript and connects to some chat
+platforms.<p>
+
+At the time of writing it only connects to Slack but there are plans to hook it
+up to Google Hangouts soon too.<p>
+
+<ul>
+	<li>Author: <a href="https://github.com/kirsle">Noah Petherbridge</a></li>
+	<li>Language: Python</li>
+	<li>Interfaces: Slack</li>
+	<li>URL: <a href="https://github.com/aichaos/admiral">https://github.com/aichaos/admiral</a></li>
+</ul>
+
+<hr>
+
+<h1>Aires</h1>
 
 Aires is a multi-protocol, multi-brained chatbot with support for connecting a
 chatbot to AOL Instant Messenger and XMPP (through which a bot could be signed
@@ -28,6 +45,7 @@ a back-end brain.<p>
 <ul>
 	<li>Author: <a href="https://github.com/kirsle">Noah Petherbridge</a></li>
 	<li>Language: Python</li>
+	<li>Interfaces: AOL Instant Messenger, XMPP</li>
 	<li>URL: <a href="https://github.com/aichaos/aires">https://github.com/aichaos/aires</a></li>
 </ul>
 
@@ -51,6 +69,27 @@ version via websockets to allow data push.<br>
 		<li><a href="https://github.com/gianksp/iris-engine">https://github.com/gianksp/iris-engine</a></li>
 		<li><a href="https://github.com/gianksp/iris">https://github.com/gianksp/iris</a></li>
 	</ul></li>
+</ul>
+
+<hr>
+
+<h1>Scarecrow</h1>
+
+Scarecrow is a chatbot written in Go. It connects to Slack and has a console
+interface for chatting with the bot locally in your terminal (and it can do both
+things simultaneously).<p>
+
+It makes use of Goroutines in Go and runs each bot interface on a separate
+thread. Plans to extend its reach to XMPP and other platforms are underway.<p>
+
+It supports RiveScript as its back-end brain but support for other brains
+(pluggable) will be possible in the future.<p>
+
+<ul>
+	<li>Author: <a href="https://github.com/kirsle">Noah Petherbridge</a></li>
+	<li>Language: Go</li>
+	<li>Interfaces: Slack, Console</li>
+	<li>URL: <a href="https://github.com/aichaos/scarecrow">https://github.com/aichaos/scarecrow</a></li>
 </ul>
 
 {% endblock %}
