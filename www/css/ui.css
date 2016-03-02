@@ -43,6 +43,23 @@ li.web {
 }
 
 /* Bootstrap CSS overrides */
+h1 {
+	color: #CD0000;
+	text-shadow: 1px 1px 0px #660000;
+}
+.panel-heading > h1 {
+	color: #000000;
+	text-shadow: none;
+}
+h2 {
+	color: #990000;
+}
+h2.feature {
+	color: #000000;
+}
+h3 {
+	color: #330000;
+}
 p {
 	margin: 10px 0px;
 }
