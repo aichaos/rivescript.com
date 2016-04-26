@@ -925,14 +925,14 @@ only:
 Here is an example using different equality tests:
 
     + what am i old enough to do
+    * <get age> == undefined => I don't know how old you are.
     * <get age> >  25 => You can do anything you want.
     * <get age> == 25 => You're old enough to rent a car with no extra fees.
     * <get age> >  21 => You're old enough to drink, but not rent a car.
     * <get age> == 21 => You're exactly old enough to drink.
     * <get age> >  18 => You're old enough to gamble, but not drink.
     * <get age> == 18 => You're exactly old enough to gamble.
-    * <get age> <  18 => You're not old enough to do much of anything yet.
-    - I don't know how old you are.
+    - You're not old enough to do much of anything yet.
 
 # LABELED SECTIONS
 
