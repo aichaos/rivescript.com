@@ -387,6 +387,7 @@ below):
     ! sub what're = what are
     ! sub what've = what have
     ! sub what'll = what will
+    ! sub who's   = who is
 
 Save this as `begin.rive` in your project directory. Now, for an explanation on
 what this code is doing.
