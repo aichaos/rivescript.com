@@ -37,9 +37,9 @@ the expected results are.
 ## Object Macros
 
 This page uses the JavaScript version of RiveScript and it therefore supports
-JavaScript object macros. Note that these will run from the context of your
-web browser, so you can't import Node modules like you'd be able to if you were
-running RiveScript from a Node app.
+JavaScript (and CoffeeScript) object macros. Note that these will run from the
+context of your web browser, so you can't import Node modules like you'd be
+able to if you were running RiveScript from a Node app.
 
 Here is an example to get you started. Paste this into the text area on the
 Try Online page:
@@ -52,6 +52,14 @@ Try Online page:
     var words = args.join(" ");
     return words.split("").reverse().join("");
 < object
+
++ is * your master
+- "<formal> is my master" is a <call>isMaster <star></call> statement.
+
+> object isMaster coffeescript
+    name = args.join " "
+    return if name is "kirsle" then "true" else "false"
+< object
 ```
 
 When you test the script, something like the following should be able to work:
@@ -59,4 +67,10 @@ When you test the script, something like the following should be able to work:
 ```
 User: reverse hello robot
 Bot: Okay... tobor olleh
+
+User: is kirsle your master?
+Bot: "Kirsle is my master" is a true statement.
+
+User: is soandso your master?
+Bot: "Soandso is my master" is a false statement.
 ```

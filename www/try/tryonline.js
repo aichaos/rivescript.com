@@ -43,6 +43,7 @@ $(document).ready(function() {
 
 		// Initialize the bot.
 		window.bot = new RiveScript();
+		window.bot.setHandler("coffeescript", new RSCoffeeScript(window.bot));
 		window.bot.stream(code, function(error) {
 			window.alert("Error in your RiveScript code:\n\n" + error);
 		});
