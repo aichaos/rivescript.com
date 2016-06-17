@@ -40,8 +40,9 @@
 			<ul class="nav navbar-nav">
 				<li{% if highlight == "home" %} class="active"{% endif %}><a href="/">Home</a></li>
 				<li{% if highlight == "about" %} class="active"{% endif %}><a href="/about">About</a></li>
+				<li{% if highlight == "learn" %} class="active"{% endif %}><a href="/try">Try It</a></li>
+				<li{% if uri == "/docs/tutorial" %} class="active"{% endif %}><a href="/docs/tutorial">Tutorial</a></li>
 				<li{% if highlight == "download" %} class="active"{% endif %}><a href="/download">Download</a></li>
-				<li{% if highlight == "learn" %} class="active"{% endif %}><a href="/learn">Learn</a></li>
 				<li{% if highlight == "develop" %} class="active"{% endif %}><a href="/develop">Develop</a></li>
 				<li{% if highlight == "community" %} class="active"{% endif %}><a href="/community">Community</a></li>
 			</ul>
