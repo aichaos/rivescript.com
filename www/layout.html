@@ -56,11 +56,17 @@
 		<div class="col-md-12">
 			{% block content %}{% endblock %}
 
-			<hr>
+			{% if not suppress_footer %}
+				<hr>
+			{% endif %}
+
 			<div class="pull-right">
 				<a href="{{ url_for('account.login') }}">Log in</a>
 			</div>
-			Web design and content copyright &copy; {{ strftime("%Y") }} Noah Petherbridge.
+
+			{% if not suppress_footer %}
+				Web design and content copyright &copy; {{ strftime("%Y") }} Noah Petherbridge.
+			{% endif %}
 		</div>
 	</div>
 </div>

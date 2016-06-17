@@ -88,3 +88,55 @@ pre {
 .navbar-inverse .navbar-nav > .open > a {
 	background-image: linear-gradient(to bottom, #441100 0px, #0F0F0F 100%);
 }
+
+/******************************************************************************
+ * Rophako CMS styles
+ ******************************************************************************/
+
+/* Get the side nav working for Markdown pages on desktop */
+
+li.toc-top {
+	display: none;
+}
+li.toc-top > a {
+	font-weight: bold;
+	color: #FF3300;
+}
+
+/* Desktop styles for the side nav bar */
+@media (min-width: 979px) {
+	#markdown-sidebar.affix-top {
+		position: static;
+		margin-top: 20px;
+		width: 250px;
+	}
+
+	#markdown-sidebar.affix {
+		position: fixed;
+		top: 60px;
+		width: 250px;
+	}
+
+	#markdown-sidebar.affix > li.toc-top {
+		display: block;
+	}
+}
+
+/* For mobile just hide it */
+@media (max-width: 995px) {
+	#markdown-sidebar {
+		display: none;
+	}
+}
+
+#markdown-sidebar > li > a {
+	padding: 2px 4px;
+}
+
+#markdown-sidebar > li.toc-2 > a {
+	padding-left: 12px;
+}
+
+#markdown-sidebar > li.toc-3 > a{
+	padding-left: 24px;
+}

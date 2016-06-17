@@ -16,10 +16,10 @@
 .codehilite .mo { color: #AE81FF; }
 .codehilite .se { color: #AE81FF; }
 .codehilite .kc { color: #AE81FF; }
-.codehilite .k { color: #66D9EF; font-style: italic; }
-.codehilite .kd { color: #66D9EF; font-style: italic; }
+.codehilite .k { color: #006699; font-style: italic; }
+.codehilite .kd { color: #006699; font-style: italic; }
 .codehilite .kn { color: #F92672; }
-.codehilite .kt { color: #66D9EF; font-style: italic; }
+.codehilite .kt { color: #006699; font-style: italic; }
 .codehilite .s { color: #999900; }
 .codehilite .sb { color: #999900; }
 .codehilite .sc { color: #999900; }
@@ -38,15 +38,15 @@
 .codehilite .ne { color: #009900; text-decoration: underline; }
 .codehilite .nf { color: #009900; }
 .codehilite .nt { color: #F92672; }
-.codehilite .nv { color: #F8F8F2; }
+.codehilite .nv { color: #303030; }
 .codehilite .ow { color: #F92672; }
 .codehilite .o { color: #F92672; }
-.codehilite .n { color: #F8F8F2; }
-.codehilite .nl { color: #F8F8F2; }
-.codehilite .nn { color: #F8F8F2; }
-.codehilite .nx { color: #F8F8F2; }
-.codehilite .bp { color: #F8F8F2; }
-.codehilite .p { color: #F8F8F2; }
+.codehilite .n { color: #303030; }
+.codehilite .nl { color: #303030; }
+.codehilite .nn { color: #303030; }
+.codehilite .nx { color: #303030; }
+.codehilite .bp { color: #303030; }
+.codehilite .p { color: #303030; }
 
 /* Kirsle.net overrides */
 .codehilite { background-color: transparent }

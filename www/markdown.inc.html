@@ -1,0 +1,54 @@
+{% if toc %}
+	{% set suppress_footer = True %}
+{% endif %}
+
+{% extends "layout.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+
+{% if toc %}
+	<div class="row">
+		<div class="col-md-3">
+			<nav class="markdown-toc">
+				<ul class="nav nav-stacked" id="markdown-sidebar">
+					<li class="toc-top">
+						<a href="#">Back to Top</a>
+					</li>
+					{% for entry in toc %}
+						{% if entry['level'] < 8 %}
+							<li class="toc-{{ entry['level'] }}">
+								<a href="#{{ entry['id'] }}">{{ entry['text'] }}</a>
+							</li>
+						{% endif %}
+					{% endfor %}
+				</ul>
+			</nav>
+		</div>
+		<div class="col-md-9">
+			{{ markdown|safe }}
+		</div>
+	</div>
+{% else %}
+	{{ markdown|safe }}
+{% endif %}
+
+{% endblock %}
+{% block scripts %}
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#markdown-sidebar').affix({
+			offset: {
+				top: $('.markdown-toc').outerHeight(true) - 300
+			}
+		});
+
+		var $body = $(document.body);
+		var navHeight = $('.navbar').outerHeight(true) + 10;
+
+		$body.scrollspy({
+			target: '#markdown-toc',
+			offset: navHeight
+		});
+	});
+</script>
+{% endblock %}
