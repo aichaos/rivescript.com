@@ -6,11 +6,22 @@ This page contains resources and links to RiveScript plugins for various things.
 **Table of Contents:**
 
 * [Chat Clients](#chat-clients)
+    * [Hubot](#hubot)
     * [HexChat](#hexchat)
 * [Text Editors](#text-editors)
     * [Syntax Highlighting](#syntax-highlighting)
 
 # Chat Clients
+
+## Hubot
+
+This is a script for [Hubot](https://hubot.github.com/) that lets you use RiveScript
+to reply to arbitrary user messages.
+
+You can install it via `npm install hubot-rivescript` and add it to your Hubot's
+`external-scripts.json` file. See the project page for more details:
+
+* [hubot-rivescript](https://github.com/aichaos/hubot-rivescript)
 
 ## HexChat
 
