@@ -28,11 +28,12 @@ def main():
     check_depends()
 
     # Do we already have Rophako?
-    if os.path.isdir("./rophako"):
+    if os.path.isdir("./rophako") and os.path.isfile("./rophako/.installed"):
         os.chdir("./rophako")
     else:
         # Clone it.
-        must_run(["git", "clone", "https://github.com/kirsle/rophako"])
+        if not os.path.isdir("./rophako"):
+            must_run(["git", "clone", "https://github.com/kirsle/rophako"])
         os.chdir("./rophako")
 
         # Make the Python environment.
@@ -48,6 +49,11 @@ def main():
         print("will now start. To quickly start the server again in the")
         print("future, just run bootstrap.py again.")
         print("=" * 80)
+
+        # Create the ".installed" file so we know it was properly installed
+        # on future invocations of bootstrap.py.
+        with open("./.installed", "w") as fh:
+            fh.write("Delete this file for bootstrap.py to reinstall dependencies.")
 
     # Run Rophako.
     must_run(["pyvenv/bin/python", "runserver.py"])
