@@ -1019,7 +1019,7 @@ Begin Block to introduce itself to new users and interview them:
 
       // If we don't know their name, set the new_user topic and continue.
       + request
-      * <get name> == undefined => {topic=new_user}{ok}
+      * <get met> == undefined => <set met=true>{topic=new_user}{ok}
       - {ok}
 
     < begin
