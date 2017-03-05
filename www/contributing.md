@@ -25,28 +25,60 @@ and what its intended scope is.
 
 The goals and scope of RiveScript:
 
-* **Use the Unix Philosophy:** "A program should do one thing and do it well."
-  RiveScript is designed to be a minimalistic, black box reply-fetching core
-  component for a chatbot. This is in stark contrast to most implementations of
-  AIML in which an "Alicebot" tends to be a complete out-of-the-box solution
-  for a complete chatbot, including configuration, a user interface
-  of some sort, and so on. Alicebots tend to be difficult to separate from their
-  AIML parsing code, and one of RiveScript's goals is to avoid that and keep
-  the core module lightweight.
-* **It should be easy to parse.** One of RiveScript's goals was to be extremely
-  easy to develop a parser for it. Again, this is in contrast to AIML which is
-  an XML-based language and Perl, in particular, has a difficult time parsing
-  it. RiveScript is a plain text, line delimited language for this reason.
+* **Use the Unix Philosophy:** *"A program should do one thing and do it well."*
+  RiveScript is designed to be a minimal "black box" reply engine for writing
+  a chat bot. This is in stark contrast to most implementations of AIML, in which an
+  *Alicebot* tends to be a full application out of the box including
+  configuration, a user interface of some kind (whether a built-in web server,
+  client connections to instant messenger platforms, or a desktop graphical
+  UI), and so on.
+
+    Alicebots tend to be difficult to separate from their AIML parsing/replying
+    code, and one of RiveScript's goals is to avoid that and keep the core module
+    lightweight and simple.
+
+* **The language should be easy to parse.** One of RiveScript's goals was to be
+  extremely easy to develop a parser for it. Again, this is in contrast to AIML
+  which is a non-structured XML language that many developers find difficult to
+  write effective parsers for in many programming languages. RiveScript is a
+  plain text, line-delimited language that can be parsed using simple `split()`
+  operations and regular expressions.
+
 * **It should not tie itself down to one programming language.** For example,
   the Python version will never integrate [NLTK](http://www.nltk.org/) and the
-  JavaScript version will never integrate
-  [wordnet](https://www.npmjs.com/package/wordnet) or
-  [ConceptNet](https://github.com/silentrob/conceptnet). Libraries like these
-  aren't equally available in multiple programming languages (for example, Perl
-  or Java) and would end up tying down RiveScript to a limited set of
-  programming language implementations.
+  JavaScript version will never integrate [wordnet](https://www.npmjs.org/package/wordnet)
+  or [ConceptNet](https://github.com/silentrob/conceptnet). Libraries like these
+  are not equally available in multiple programming languages and would end up
+  tying down RiveScript to a limited set of programming language implementations.
 
-**Examples of out-of-scope feature requests:**
+* **RiveScript's behavior should be consistent across implementations.** As much
+  as possible, all of the RiveScript implementations in any programming language
+  should support the same feature set (per the Working Draft) and bots running
+  on them should behave the same.
+
+    Occasionally the implementations may drift apart due to varying popularity in
+    programming languages and contributions from outside developers, but these
+    features should be additive in nature (going above and beyond the Working
+    Draft spec) and not change core behaviors that would cause a RiveScript
+    personality to behave differently depending on programming language.
+
+* **The RiveScript personality should maintain full control of itself.** The
+  RiveScript language provides features for a bot personality (a collection of
+  RiveScript source documents) to *fully* describe itself and its configuration.
+  For example, bot variables (like the bot's name, age and location) are defined
+  in RiveScript source code, as well as substitution patterns and how multi-line
+  commands are concatenated together.
+
+    This, again, is in contrast to Alicebots which tend to store configuration in
+    a separate location from the AIML reply files. With RiveScript, it should
+    remain possible to just take a directory full of `*.rive` files from one
+    program to another (even across different programming languages) and have the
+    bot personality behave identically with regards to how it modifies user messages
+    (substitutions), how its triggers match users' messages, and how its replies
+    are formatted (with regards to `^Continue` commands when a reply needs to
+    span multiple lines in source code).
+
+### Examples of out-of-scope feature requests
 
 Here are some examples of feature requests that I declined to add to the core
 RiveScript language or its implementations:
@@ -57,13 +89,25 @@ RiveScript language or its implementations:
   what a sentence is or how they should be split, and this is extremely trivial
   to implement on your own anyway (split into an array, loop over it and get one
   reply for each sentence, join the replies into an output string).
-* **MySQL or any other database system.** This is also outside the scope of
-  RiveScript and should be implemented by the chatbot developer. The RiveScript
-  libraries all support methods to import and export user variables as
-  JSON-serializable data structures; whether your bot saves those datum to the
-  hard disk or sticks them in a MySQL table is up to you. RiveScript shouldn't
-  be "bloated" by including native support for MySQL or Postgres or
-  *insert-your-favorite-dbm-here*.
+
+* **MySQL or any other database system.** The core libraries will not ship with
+  built-in support for any particular database engine; this is outside the scope
+  of RiveScript and should be implemented by the chatbot developer.
+
+    All of the RiveScript implementations provide methods to export and import
+    user variables as JSON-serializable data structures, so you can use these
+    methods and persist data in any way that you wish.
+
+    Note that there *may* be "official" drivers to support databases included in
+    the source code repository of some RiveScript implementations, but these are
+    shipped as separate, optional, packages. This decision is related to RiveScript's
+    goal of being small and lightweight; for example, if the core library supported
+    a bunch of database engines, then users installing the library would necessarily
+    have to install dependencies for MySQL, Redis, PostgreSQL, MongoDB, or
+    *insert your favorite DBM here* regardless of whether they wanted them or not.
+
+    By keeping database engines out of the RiveScript core, the library can stay
+    small, with minimal dependencies, and without any opinions.
 
 # Contributing Examples
 
@@ -92,8 +136,9 @@ developers who want to add features or fix bugs within the first-party
 implementations of the RiveScript Interpreter.
 
 In general, use the best practices for the particular programming language,
-for example `perlstyle` for Perl, and PEP 8 for Python. Also, check the style
-of the existing code and follow it with any new code you write.
+for example [perlstyle](http://perldoc.perl.org/perlstyle.html) for Perl,
+and [PEP 8](https://www.python.org/dev/peps/pep-0008/) for Python. Also, check
+the style of the existing code and follow it with any new code you write.
 
 It is advised that you configure your text editor to show invisible characters,
 such as tabs vs. spaces when indenting your code. Also, make sure that you
