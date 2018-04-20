@@ -48,4 +48,5 @@ stylize RiveScript syntax.
 * SublimeText: [RiveScript](https://packagecontrol.io/packages/RiveScript) ([source](https://github.com/thebakeryio/rivescript-sublimetext))
 * Vim: [vim-rivescript-0.01.tar.gz](https://static.rivescript.com/files/etc/vim-rivescript-0.01.tar.gz) -- The vim plugin is currently
   pretty basic ([screenshot](https://static.rivescript.com/files/etc/vim-rivescript-0.01.png)), contributions are welcome.
+* Emacs: [rivescript-mode](https://github.com/escherdragon/rivescript-mode) -- major mode for syntax highlighting ([screenshot](https://github.com/escherdragon/rivescript-mode/blob/master/screenshot.png))
 
