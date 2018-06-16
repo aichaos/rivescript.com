@@ -78,22 +78,25 @@ $(document).ready(function() {
 			if (message.length == 0) {
 				return;
 			}
-			var reply = window.bot.reply("local-user", message);
-			reply = reply.replace(new RegExp("\n", "g"), "<br>");
 
-			// Update the dialogue.
+			// Echo the user immediately and clear their input.
 			var $user = $("<div></div>");
-			var $bot = $("<div></div>");
 			$user.html('<span class="try-user">User:</span> ' + message);
-			$bot.html('<span class="try-bot">Bot:</span> ' + reply);
 			$dialogue.append($user);
-			$dialogue.append($bot);
-
-			// Scroll to bottom.
-			$dialogue.animate({ scrollTop: $dialogue[0].scrollHeight }, 1000);
-
-			// Clear the input.
 			$message.val("");
+
+			// Fetch the reply.
+			window.bot.reply("local-user", message).then(function(reply) {
+				reply = reply.replace(new RegExp("\n", "g"), "<br>");
+
+				// Update the dialogue.
+				var $bot = $("<div></div>");
+				$bot.html('<span class="try-bot">Bot:</span> ' + reply);
+				$dialogue.append($bot);
+
+				// Scroll to bottom.
+				$dialogue.animate({ scrollTop: $dialogue[0].scrollHeight }, 1000);
+			});
 		}
 	})
 });
