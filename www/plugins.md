@@ -8,6 +8,8 @@ This page contains resources and links to RiveScript plugins for various things.
 * [Chat Clients](#chat-clients)
     * [Hubot](#hubot)
     * [HexChat](#hexchat)
+* [Developer Tools](#developer-tools)
+    * [Code Coverage](#code-coverage)
 * [Text Editors](#text-editors)
     * [Syntax Highlighting](#syntax-highlighting)
 
@@ -33,7 +35,17 @@ ago (2010), haven't tried it recently, don't fully remember how it works.
 
 * [XChat-RS-0.01.tar.gz](https://static.rivescript.com/files/plugins/XChat-RS-0.01.tar.gz)
 
-- - -
+-----
+
+# Developer Tools
+
+## Code Coverage
+
+* Python: [RiveScript Coverage Plugin](https://pypi.org/project/rivescript-coverage-plugin/)
+  is a plugin for Coverage.py which extends that package to measure code coverage for
+  RiveScript files.
+
+-----
 
 # Text Editors
 
