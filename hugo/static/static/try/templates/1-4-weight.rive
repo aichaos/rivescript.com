@@ -1,0 +1,6 @@
++ hello bot
+- Hello human!
+- Hello!{weight=5}
+- Hi there!
+- Hey!{weight=5}
+- Hi!{weight=10}

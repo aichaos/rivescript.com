@@ -1,0 +1,107 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+html {
+    scroll-padding-top: 60px;
+}
+body {
+    margin: 0 auto;
+    max-width: 1170px;
+    padding-top: 52px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+img.circle {
+    border-radius: 50%;
+}
+
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 40;
+    line-height: 3rem;
+    background-image: linear-gradient(to bottom, #662200 0px, #441100 100%);
+}
+.main-header nav {
+    max-width: 1234px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+.navbar-burger {
+    color: white !important;
+}
+.navbar-item {
+    color: white !important;
+}
+.navbar-item.is-active,
+.navbar-item.is-tab:hover {
+    border-bottom-color: white !important;
+}
+
+main {
+    min-height: 100%;
+    margin: 0 1rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+    padding: 5rem 1.5rem 1.5rem 1.5rem;
+}
+
+footer {
+    max-width: 860px;
+    padding: 0 4rem;
+    margin: 2rem auto;
+    color: #036;
+    font-weight: bold;
+    text-align: center;
+    font-style: italic;
+}
+
+.smaller {
+    font-size: smaller;
+}
+
+.center {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Code example syntax */
+pre.rs .trigger {
+	color: #FF0000;
+}
+pre.rs .reply {
+	color: #00AAFF;
+}
+pre.rs .condition {
+	color: #FFAAFF;
+}
+
+/* Backward compatibility hacks from pre-Hugo+Bulma site */
+table.aiml-comparison td {
+    color: black !important;
+}
+table.aiml-comparison th {
+    color: white !important;
+}
+
+/* Bulma CSS overrides */
+
+.navbar, .navbar-menu {
+    background-color: transparent !important;
+    box-shadow: none;
+}
+aside.menu ul {
+    list-style: none;
+}
+.textarea {
+    font-family: 'DejaVu Sans Mono', 'Lucida Console', 'Courier New', Courier, monospace;
+    font-size: small;
+}

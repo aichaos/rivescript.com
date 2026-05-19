@@ -1,0 +1,198 @@
++++
+title = 'Home'
+date = 2023-01-01T08:00:00-07:00
+draft = false
++++
+<section class="hero is-bold is-light mb-4">
+    <div class="hero-body">
+        <h1 class="title is-size-1 mb-4">RiveScript</h1>
+        <h2 class="subtitle mb-0">
+            RiveScript is a simple scripting language for chatbots with a friendly, easy to learn syntax.
+        </h2>
+        <h2 class="subtitle">
+            Create your own chatbot in Rust, Go, Java, JavaScript, Perl or Python.
+        </h2>
+        <div class="block">
+            <a href="/about" class="button is-primary">
+                Learn More »
+            </a>
+        </div>
+    </div>
+</section>
+
+<div class="block p-4">
+    <div class="columns">
+        <div class="column content">
+            <h2>Simple</h2>
+            <p>
+                RiveScript exposes a simple plain text scripting language that's easy
+                to learn and begin writing in quickly. No need to mess with complicated
+                opaque XML structures or random symbols and line noise like with some
+                other chatbot languages!
+            </p>
+        </div>
+
+        <div class="column content">
+            <h2>Powerful</h2>
+            <p>
+                RiveScript has a handful of simple rules that can be combined in powerful
+                ways to build an impressive chatbot personality. Write triggers in a simplified
+                regular expression format to match complex sets of word patterns in one go.
+            </p>
+        </div>
+
+        <div class="column content">
+            <h2>Flexible</h2>
+            <p>
+                 RiveScript takes a "Unix-like" approach to its development: the core library
+                 is small and self-contained and it does one thing very well—takes human
+                 input and gives an intelligent response. This flexibility enables RiveScript
+                 to be used how you need it to.
+            </p>
+        </div>
+
+        <div class="column content">
+            <h2>Open Source</h2>
+            <p>
+                Released under the most liberal open source license available, MIT. Interfaces
+                are available for Rust, Go, Java, JavaScript, Perl and Python.
+                <a href="/develop">Learn more.</a>
+            </p>
+            <div class="has-text-centered">
+                <i class="fab fa-github is-size-1"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="block content">
+        <hr>
+
+        <h1>RiveScript in 2026</h1>
+
+        <p>
+            On May 19 2026 <a href="https://www.rivescript.com">RiveScript.com</a> was converted
+            into a 'static website' after having been a (needlessly) dynamic website with a Python
+            back-end since at least 2015. This move to a static website makes RiveScript.com easier
+            to maintain going into the future (for example, making it less prone to outages after upgrading its
+            web server's OS and breaking all of the Python virtualenvs!), and I took the opportunity
+            to modernize its look by moving away from <a href="https://getbootstrap.com/">Twitter Bootstrap</a>
+            CSS and onto <a href="https://bulma.io">Bulma</a>, which gave us free "dark mode" support as well!
+        </p>
+
+        <p>
+            As for RiveScript itself, I have some news to talk about in 2026 and some reflections
+            on the current state of chatbot technology with the Large Language Models (LLMs) that we
+            are all familiar with today.
+        </p>
+
+        <h3>
+            A new RiveScript port in Rust
+        </h3>
+
+        <p>
+            In 2026, the original author of RiveScript has ported the chatbot engine to <em>yet another</em>
+            new programming language: this time to <a href="https://rust-lang.org/">Rust!</a>
+        </p>
+
+        <p>
+            RiveScript in Rust is mildly interesting because RiveScript originally used the file extension
+            <code>.rs</code> for its chatbot source files, since the original Perl version released in 2005.
+            In 2013, I was contacted by a developer of the upcoming Rust language about changing my file
+            extension to something else to avoid confusion with Rust source files. The file extension was
+            changed to <code>.rive</code>, but anyway, the Rust port brings us full circle again with a
+            native implementation of <code>rivescript.rs</code> now being a thing that exists!
+        </p>
+
+        <p>
+            The Rust port is fully 'feature complete' on par with the other five implementations. Like the
+            Go version, it comes with a JavaScript engine for RiveScript object macros and a Redis implementation
+            to store user variables in that rather than the default in-memory hash maps. You can
+            <a href="https://www.kirsle.net/rivescript-in-rust">read about it on the author's blog!</a>
+        </p>
+
+        <h3>
+            RiveScript and Large Language Models
+        </h3>
+
+        <p>
+            RiveScript has nothing in common with the modern style of LLM chatbots such as ChatGPT, Claude or
+            Gemini. Instead, RiveScript is in the category of "canned responses" types of chatbots, where the
+            botmaster had to anticipate all of the possible questions that a user might ask and program the
+            responses to those questions in advance. This puts RiveScript in the same category as
+            <a href="/wiki/Language/AIML">AIML</a> (which is <a href="/history">its primary inspiration</a>)
+            and <a href="/wiki/Language/ChatScript">ChatScript.</a>
+        </p>
+
+        <p>
+            However, in 2026 RiveScript can be paired very well with LLMs!
+        </p>
+
+        <p>
+            A big problem with LLMs is that they are "unpredictable" and maybe you want to hard-code certain
+            responses into your chatbot. RiveScript is specifically designed to make those "canned responses"
+            easy to write and maintain! So you could put RiveScript "in front" for your chatbot and let it have
+            first dibs on answering a user's question, and only when RiveScript had no match for their message,
+            would you pass the message along to your LLM to provide a good answer for whatever random query your
+            user had. This way you could control how your bot responds to your important questions, while still
+            providing a satisfying user experience for everything else they could possibly ask of your bot!
+        </p>
+
+        <p>
+            RiveScript itself is just the <a href="/interpreters">lightweight 'black box' reply engine</a> so
+            it can be trivially easy to check it for a reply and, if it didn't match the user's message to any
+            triggers you programmed into it, have it fall back to your LLM to fetch a response instead.
+        </p>
+
+        <h3>
+            A Future for RiveScript?
+        </h3>
+
+        <p>
+            RiveScript (as a language) has generally been considered to be "feature complete" for well over
+            a decade at this point. Before the Rust version, the last new first-party implementation was
+            the Go version released in 2015.
+        </p>
+
+        <p>
+            During RiveScript's lifetime, I had seen the "chatbot hype" rise and fall a couple different times.
+            In 2005 with the original Perl version, chatbots on AOL Instant Messenger were highly popular.
+            A second surge in hype came about around 2012 with the Facebook Bot Platform and similar products
+            from Google and Microsoft. And then the third wave came after 2022 with the rise of ChatGPT and
+            modern Large Language Models.
+        </p>
+
+        <p>
+            That middle wave attracted a lot of interest towards RiveScript and the Python and JavaScript ports
+            (in particular) received tons of contributions from people on GitHub. RiveScript also was used
+            around that time to power a whole startup company called RunDexter!
+        </p>
+
+        <p>
+            RiveScript being available in multiple different programming languages proved to be both a blessing
+            and a curse. It broadened the reach of RiveScript to be accessible to more developers, but in turn
+            it caused the RiveScript language itself to become slow to evolve: any significant new feature needed
+            to be implemented five different times in five different programming languages!
+        </p>
+
+        <p>
+            <strong>If there is to be any significant new work on RiveScript,</strong> that work would be
+            done in the Rust programming language. This is because Rust can easily be compiled into a C compatible
+            shared library, which all other languages are able to link with, alleviating the problem of needing to
+            keep so many different implementations in sync. The recent port of RiveScript to Rust is a big step
+            in that direction.
+        </p>
+
+        <p>
+            As the original author of RiveScript, I have a lot of competing priorities and other projects nowadays.
+            I make no promises that RiveScript will be extended any time soon with significant new features. However,
+            if a new wave of interest returns to RiveScript in the future (the current LLM wave has so far passed RiveScript
+            by), it may reignite my interest in getting back into RiveScript at a deeper level.
+        </p>
+
+        <p>
+            In the mean time, the primary six RiveScript ports are all feature complete, working and are generally stable.
+            Apart from the Rust port which was most recently created, the others are in 'maintenance mode' where
+            they may receive bug fixes but probably no significant new features.
+        </p>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<header class="main-header">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item is-tab {% if filename == 'index.html' %}is-active{% endif %}" href="/">
+                <strong>{{.Site.Title}}</strong>
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="mainNavbar">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="mainNavbar" class="navbar-menu">
+
+            {{- partial "navbar.html" . -}}
+
+        </div>
+    </nav>
+</header>

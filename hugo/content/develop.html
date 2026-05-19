@@ -1,0 +1,92 @@
++++
+date = '2026-05-19T13:40:10-07:00'
+draft = false
+title = 'Develop'
++++
+<h1>Develop with RiveScript</h1>
+
+<p>
+	Here lies information and resources to get started in developing with
+	RiveScript. This information is aimed at software developers who wish to use
+	RiveScript in their own projects, as well as developers who wish to help me work
+	on the core RiveScript language itself.
+</p>
+
+<h2>Using the RiveScript Library</h2>
+
+<p>
+	If you fall into the first camp and want to <em>use</em> RiveScript in your own
+	application, check out the <a href="/interpreters">RiveScript Interpreters</a>
+	page and find a library that will work for your project.
+</p>
+
+<p>
+	There are first-party RiveScript modules currently available for Rust, Go, Java,
+	JavaScript, Perl and Python. Third party support for RiveScript includes PHP
+	and C#.
+</p>
+
+<h2>Write a New Library</h2>
+
+<p>
+	No RiveScript library is available for your favorite programming language? Why
+	not write one! Check out the source codes of the existing implementations and
+	begin porting it to a new language. If you'd prefer more of a "clean room"
+	approach where you don't look at the existing implementations, read on for
+	information about the Working Draft.
+</p>
+
+<p>
+	If you're writing a new library and want to refer to existing code, the
+	recommended implementations to look at are the
+	<a href="https://github.com/aichaos/rivescript-js" target="_blank">JavaScript</a> or
+	<a href="https://github.com/aichaos/rivescript-go" target="_blank">Go</a>
+	versions, as these were the most recently developed and have a better code
+	organizational style (e.g. separating the syntax parser library into its own
+	separate module).
+</p>
+
+<h1>Get Text Editor Plugins</h1>
+
+<p>
+	Make writing RiveScript code easier by installing a syntax highlighting plugin
+	for your text editor!
+</p>
+
+<p>
+	There are <a href="/plugins#syntax-highlighting">syntax highlighting plugins</a>
+	for popular text editors including <a href="https://atom.io/" target="_blank">Atom</a>,
+	<a href="https://www.sublimetext.com/" target="_blank">SublimeText</a> and
+	<a href="http://www.vim.org/" target="_blank">Vim</a>.
+</p>
+
+<h1>RiveScript Working Draft</h1>
+
+<p>
+	The RiveScript Working Draft (WD) is a document that defines the standards for
+	how RiveScript should work, from an implementation-agnostic point of view.
+	When developing a RiveScript interpreter, the Working Draft should be followed
+	as closely as possible. If any of the current implementations don't do what the
+	Working Draft says they should, this is considered to be a bug and you can
+	file a bug report or send a pull request.
+</p>
+
+<p>
+	The current version of the Working Draft is at
+	<a href="http://www.rivescript.com/wd/RiveScript">http://www.rivescript.com/wd/RiveScript</a>
+	and older versions are archived at
+	<a href="http://static.rivescript.com/wd/">http://static.rivescript.com/wd/</a>.
+</p>
+
+<h1>Contribute to the RiveScript Language Itself</h1>
+
+<p>
+	Feel free to <a href="/contact">get in touch</a> with me about changes and
+	features for the core RiveScript language itself. First, review the
+	<a href="/contributing">Contributor Guidelines</a> and make sure you understand
+	the goals and scope of the RiveScript language; RiveScript is designed to be
+	small and do one thing really well, which leaves a lot of nice-to-have features
+	well outside of the scope of the core language (oftentimes these features would
+	be something for a <em>chatbot application</em> to implement, not the core
+	RiveScript interpreters).
+</p>

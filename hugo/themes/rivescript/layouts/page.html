@@ -1,0 +1,16 @@
+{{ define "main" }}
+<div class="content p-4">
+    {{ .Content }}
+
+    <div class="block mt-4">
+        <em>
+            <small>
+                {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+                {{ $dateHuman := .Date | time.Format ":date_long" }}
+                Page last updated on
+                <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+            </small>
+        </em>
+    </div>
+</div>
+{{ end }}

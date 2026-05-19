@@ -1,0 +1,78 @@
++++
+date = '2026-05-19T13:40:10-07:00'
+draft = false
+title = 'Try It'
++++
+<link rel="stylesheet" type="text/css" href="/static/try/tryonline.css">
+<h1 class="mt-0">Try RiveScript Online</h1>
+
+With this page you can try RiveScript directly from your web browser! Simply
+type in some RiveScript code into the text area below and click the "Execute"
+button to test your code live inside your browser! You can also use
+(browser-side) JavaScript and
+<a href="http://coffeescript.org/" target="_blank">CoffeeScript</a> object
+macros.<p>
+
+If you need help, <a href="/try/help">view the help page</a>.<p>
+
+<strong>Want to share your code snippets?</strong> Try the new
+<a href="https://play.rivescript.com/" target="_blank">RiveScript Playground</a>
+and get access to better debugging tools and the ability to share your code
+with others.<p>
+
+<span id="rivescript-version"></span><p>
+
+<div class="columns is-mobile">
+	<div class="column">
+		Templates: <select name="template" id="template">
+			<option value="">-- select a template --</option>
+			<option value="1-1-simple-example.rive">1-1-simple-example.rive</option>
+			<option value="1-2-comments.rive">1-2-comments.rive</option>
+			<option value="1-3-replies.rive">1-3-replies.rive</option>
+			<option value="1-4-weight.rive">1-4-weight.rive</option>
+			<option value="2-1-wildcards.rive">2-1-wildcards.rive</option>
+			<option value="2-2-alternations.rive">2-2-alternations.rive</option>
+			<option value="2-3-optionals.rive">2-3-optionals.rive</option>
+			<option value="2-4-google1.rive">2-4-google1.rive</option>
+			<option value="2-5-google2.rive">2-5-google2.rive</option>
+			<option value="rs-standard.rive">rs-standard.rive</option>
+			<option value="testsuite.rive">testsuite.rive</option>
+		</select>
+	</div>
+	<div class="column is-narrow">
+		<button type="button" id="execute" class="button is-small is-primary">
+			<i class="fa fa-play"></i>
+			Execute/Test Script
+		</button>
+	</div>
+</div>
+
+<textarea class="textarea" cols="80" rows="20" id="editor"></textarea>
+
+<div class="modal" id="chatModal" tabindex="-1" role="dialog" aria-labelledby="chatModalLabel" aria-hidden="true">
+	<div class="modal-background"></div>
+	<div class="modal-content">
+		<div class="card">
+			<header class="card-header has-background-info">
+				<p class="card-header-title has-text-dark" id="chatModalLabel">Dialogue</p>
+			</header>
+			<div class="card-content">
+				<div class="try-dialogue" id="dialogue"></div>
+
+				<div class="field">
+					<label class="label" for="message">
+						Send a Message
+					</label>
+					<input type="text" class="input" id="message" placeholder="Press Enter to send">
+				</div>
+			</div>
+			<footer class="card-footer mt-0">
+				<button type="button" class="card-footer-item has-text-success" data-dismiss="modal">Close</button>
+			</footer>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="https://unpkg.com/rivescript@latest/dist/rivescript.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/rivescript-contrib-coffeescript@latest/dist/rivescript-contrib-coffeescript.min.js"></script>
+<script type="text/javascript" src="/static/try/tryonline.js"></script>
